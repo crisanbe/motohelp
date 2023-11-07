@@ -1,210 +1,87 @@
 // ignore_for_file: prefer_single_quotes, lines_longer_than_80_chars final
 Map<String, dynamic> environment = {
-  "appConfig": "lib/config/config_en.json",
+  "appConfig": "lib/config/config_es.json",
   "serverConfig": {
-    /// 🌍 The register URL domain that matches with Envato Purchase Code
-    /// 🔑 Also, make sure to update the envatoPurchaseCode from configs/env.props
-    'url': 'https://mstore.io',
-    'type': 'woo',
-    'consumerKey': 'ck_c16d601d14a44c8080418c1ab9336b72ae8faff2',
-    'consumerSecret': 'cs_1c11c4d0ee3bef861421bf3622f20f6b49c8497a',
-
-    /// Wordpress blog, it could be removed if using the same above url
-    'blog': 'https://mstore.io',
+    "url": "https://motohelp.com.co/",
+    "type": "woo",
+    "consumerKey": "ck_740095801e84f140f0cf40c9835680843c0b680b",
+    "consumerSecret": "cs_d43d3ae7d9f7205ef5a742558668591d507c02b7"
   },
-
-  /// ➡️ lib/common/config/general.dart
   "defaultDarkTheme": false,
   "enableRemoteConfigFirebase": false,
   "enableFirebaseAnalytics": false,
   "loginSMSConstants": {
-    "countryCodeDefault": "US",
-    "dialCodeDefault": "+1",
-    "nameDefault": "United States",
+    "dialCodeDefault": "+57",
+    "nameDefault": "Colombia",
+    "countryCodeDefault": "CO"
   },
   "phoneNumberConfig": {
-    "enable": false,
-    "countryCodeDefault": "US",
     "dialCodeDefault": "+1",
-    "useInternationalFormat": true,
+    "customCountryList": [],
+    "enablePhoneNumberValidation": false,
     "selectorFlagAsPrefixIcon": true,
+    "countryCodeDefault": "US",
     "showCountryFlag": true,
-    "customCountryList": [], // List alpha_2_code. E.g: ["VN", "AU"]
-    "selectorType": "BOTTOM_SHEET", // [DROPDOWN, BOTTOM_SHEET, DIALOG]
+    "selectorType": "BOTTOM_SHEET",
+    "useInternationalFormat": true
   },
   "appRatingConfig": {
-    'showOnOpen': false,
-    'android': 'com.inspireui.fluxstore',
-    'ios': '1469772800',
-    'minDays': 7,
-    'minLaunches': 10,
-    'remindDays': 7,
-    'remindLaunches': 10,
+    "showOnOpen": false,
+    "android": "com.inspireui.fluxstore",
+    "ios": "1469772800",
+    "minDays": 7,
+    "minLaunches": 10,
+    "remindDays": 7,
+    "remindLaunches": 10
   },
   "advanceConfig": {
-    "DefaultLanguage": "en",
-    "DetailedBlogLayout": "halfSizeImageType",
-    "EnablePointReward": false,
-    "hideOutOfStock": false,
+    "AlwaysShowTabBar": false,
+    "isMultiLanguages": false,
+    "OrderNotesLinkSupport": false,
+    "SupportPageUrl": "https://support.inspireui.com/",
     "HideEmptyTags": true,
-    "HideEmptyCategories": true,
-    "EnableRating": true,
-    "hideEmptyProductListRating": true,
-
-    "EnableCart": true,
-
-    /// Enable search by SKU in search screen
-    "EnableSkuSearch": true,
-
-    /// Show stock Status on product List & Product Detail
-    "showStockStatus": true,
-
-    /// Gird count setting on Category screen
-    "GridCount": 3,
-
-    /// set isCaching to true if you have upload the config file to mstore-api
-    /// set kIsResizeImage to true if you have finished running Re-generate image plugin
-    /// ref: https://support.inspireui.com/help-center/articles/3/8/19/app-performance
+    "AjaxSearchURL": "",
     "isCaching": false,
-    "kIsResizeImage": false,
-    "httpCache": true,
-
-    /// Stripe payment only: set currencyCode and smallestUnitRate.
-    /// All API requests expect amounts to be provided in a currency’s smallest unit.
-    /// For example, to charge 10 USD, provide an amount value of 1000 (i.e., 1000 cents).
-    /// Reference: https://stripe.com/docs/currencies#zero-decimal
+    "OrderNotesWithPrivateNote": true,
+    "EnableWOOCSCurrencySwitcher": true,
+    "AutoDetectLanguage": true,
+    "ShowExpiredCoupons": true,
+    "showRequestNotification": true,
+    "PrivacyPoliciesPageId": 25569,
+    "ShowBottomCornerCart": true,
+    "EnableCouponCode": false,
+    "DetailedBlogLayout": "fullSizeImageType",
+    "MaxQueryRadiusDistance": 10,
+    "DownloadPageUrl": "https://mstore.io/#download",
+    "AlwaysClearWebViewCache": false,
     "DefaultCurrency": {
       "symbol": "\$",
-      "decimalDigits": 2,
+      "smallestUnitRate": 1,
       "symbolBeforeTheNumber": true,
-      "currency": "USD",
-      "currencyCode": "usd",
-      "smallestUnitRate": 100,
-
-      /// 100 cents = 1 usd
+      "currency": "COP",
+      "decimalDigits": 0,
+      "currencyCode": "cop"
     },
-    "Currencies": [
-      {
-        "symbol": "\$",
-        "decimalDigits": 2,
-        "symbolBeforeTheNumber": true,
-        "currency": "USD",
-        "currencyCode": "USD",
-        "smallestUnitRate": 100,
-
-        /// 100 cents = 1 usd
-      },
-      {
-        "symbol": "₹",
-        "decimalDigits": 0,
-        "symbolBeforeTheNumber": true,
-        "currency": "INR",
-        "currencyCode": "INR",
-      },
-      {
-        "symbol": "đ",
-        "decimalDigits": 2,
-        "symbolBeforeTheNumber": false,
-        "currency": "VND",
-        "currencyCode": "VND",
-      },
-      {
-        "symbol": "€",
-        "decimalDigits": 2,
-        "symbolBeforeTheNumber": true,
-        "currency": "EUR",
-        "currencyCode": "EUR",
-      },
-      {
-        "symbol": "£",
-        "decimalDigits": 2,
-        "symbolBeforeTheNumber": true,
-        "currency": "Pound sterling",
-        "currencyCode": "GBP",
-        "smallestUnitRate": 100,
-
-        /// 100 pennies = 1 pound
-      },
-      {
-        'symbol': 'AR\$',
-        'decimalDigits': 2,
-        'symbolBeforeTheNumber': true,
-        'currency': 'ARS',
-        'currencyCode': 'ARS',
-      },
-      {
-        'symbol': 'R',
-        'decimalDigits': 2,
-        'symbolBeforeTheNumber': true,
-        'currency': 'ZAR',
-        'currencyCode': 'ZAR',
-      },
-      {
-        'symbol': '₱',
-        'decimalDigits': 2,
-        'symbolBeforeTheNumber': true,
-        'currency': 'PHP',
-        'currencyCode': 'PHP',
-      },
-      {
-        'symbol': 'Rp',
-        'decimalDigits': 2,
-        'symbolBeforeTheNumber': true,
-        'currency': 'IDR',
-        'currencyCode': 'IDR',
-      },
-      {
-        'symbol': 'SAR',
-        'decimalDigits': 2,
-        'symbolBeforeTheNumber': true,
-        'currency': 'Saudi Riyal',
-        'currencyCode': 'SAR',
-      }
-    ],
-
-    /// Below config is used for Magento store
-    "DefaultStoreViewCode": "",
-    "EnableAttributesConfigurableProduct": ["color", "size"],
-    "EnableAttributesLabelConfigurableProduct": ["color", "size"],
-
-    /// if the woo commerce website supports multi languages
-    /// set false if the website only have one language
-    "isMultiLanguages": true,
-
-    ///Review gets approved automatically on woocommerce admin without requiring administrator to approve.
+    "EnableVersionCheck": false,
+    "EnableDigitsMobileLogin": false,
+    "enableProductBackdrop": false,
+    "kIsResizeImage": false,
+    "WebViewScript": "",
+    "EnableMembershipUltimate": false,
+    "gdpr": {
+      "confirmCaptcha": "PERMANENTLY DELETE",
+      "showPrivacyPolicyFirstTime": false,
+      "showDeleteAccount": true
+    },
+    "EnableSkuSearch": false,
+    "smsLoginAsDefault": false,
+    "EnableNewSMSLogin": false,
+    "HideEmptyCategories": true,
+    "categoryImageMenu": true,
+    "EnablePointReward": false,
     "EnableApprovedReview": false,
-
-    /// Sync Cart from website and mobile
-    "EnableSyncCartFromWebsite": false,
-    "EnableSyncCartToWebsite": false,
-
-    /// Enable firebase to support FCM, realtime chat for Fluxstore MV
-    "EnableFirebase": true,
-
-    /// ratio Product Image, default value is 1.2 = height / width
-    "RatioProductImage": 1.2,
-
-    /// Enable Coupon Code When checkout
-    "EnableCouponCode": true,
-
-    /// Enable to Show Coupon list.
-    "ShowCouponList": true,
-
-    /// Enable this will show all coupons in Coupon list.
-    /// Disable will show only coupons which is restricted to the current user"s email.
-    "ShowAllCoupons": true,
-
-    /// Show expired coupons in Coupon list.
-    "ShowExpiredCoupons": true,
-    "AlwaysShowTabBar": false,
-
-    /// Privacy Policies page ID. If page ID is null, use the URL instead. Accessible in the app via Settings > Privacy menu.
-    "PrivacyPoliciesPageUrlOrId": "https://policies.google.com/",
-
-    "SupportPageUrl": "https://support.inspireui.com/",
-
-    "DownloadPageUrl": 'https://mstore.io/#download',
-
+    "EnableCart": true,
+    "showStockStatus": true,
     "SocialConnectUrl": [
       {
         "name": "Facebook",
@@ -212,119 +89,62 @@ Map<String, dynamic> environment = {
         "url": "https://www.facebook.com/inspireui"
       },
       {
-        "name": "Instagram",
         "icon": "assets/icons/logins/instagram.png",
+        "name": "Instagram",
         "url": "https://www.instagram.com/inspireui9/"
-      },
+      }
     ],
-
-    "AutoDetectLanguage": false,
-    "QueryRadiusDistance": 10,
-    "MinQueryRadiusDistance": 1,
-
-    /// Distance by km
-    "MaxQueryRadiusDistance": 10,
-
-    /// Enable Membership Pro Ultimate WP
-    "EnableMembershipUltimate": false,
-
-    /// Enable Paid Membership Pro
-    "EnablePaidMembershipPro": false,
-
-    /// Enable Delivery Date when doing checkout
+    "PrivacyPoliciesPageUrl": "https://inspireui.com/privacy-policy/",
+    "DefaultStoreViewCode": "",
     "EnableDeliveryDateOnCheckout": true,
-
-    /// Enable new SMS Login
-    "EnableNewSMSLogin": false,
-
-    /// Enable bottom add to cart from product card view
-    "EnableBottomAddToCart": true,
-
-    /// Disable inAppWebView to use webview_flutter
-    /// so webview can navigate to external app.
-    /// Useful for webview checkout which need to handle payment in another app.
+    "RatioProductImage": 1.2,
+    "EnableRating": true,
     "inAppWebView": false,
-    'AlwaysClearWebViewCache': false,
-    "WebViewScript": "",
-
-    'AlwaysRefreshBlog': false,
-
-    ///support multi currency via WOOCS – Currency Switcher for WooCommerce plugin (https://wordpress.org/plugins/woocommerce-currency-switcher/)
-    "EnableWOOCSCurrencySwitcher": true,
-
-    /// Enable product backdrop layout - https://tppr.me/L5Pnf
-    "enableProductBackdrop": false,
-
-    /// false: show category menu as Text https://tppr.me/v3bLI
-    /// true: show as Category Image
-    "categoryImageMenu": true,
-
-    ///Support Digits : WordPress Mobile Number Signup and Login plugin (https://codecanyon.net/item/digits-wordpress-mobile-number-signup-and-login/19801105)
-    "EnableDigitsMobileLogin": false,
-    "EnableDigitsMobileFirebase": false,
-    "EnableDigitsMobileWhatsApp": false,
-
-    /// Enable Ajax Search Pro, https://your-domain/wp-json/ajax-search-pro/v0/woo_search?s=
-    "AjaxSearchURL": "",
-
-    "gdpr": {
-      "showPrivacyPolicyFirstTime": false,
-      "showDeleteAccount": true,
-      "confirmCaptcha": "PERMANENTLY DELETE",
-    },
-
-    /// show order notes in order detail with private notes
-    "OrderNotesWithPrivateNote": true,
-
-    "OrderNotesLinkSupport": false,
-
-    /// Just accept select the country on this list
-    /// example: {"vn", "ae"}
-    "supportCountriesShipping": null,
-
-    // Enable the request Notify permission from onboarding
-    "showRequestNotification": true,
-
-    "versionCheck": {
-      "enable": false,
-      "iOSAppStoreCountry": "US",
-    },
-    "inAppUpdateForAndroid": {
-      "enable": false,
-      // "flexible, immediate"
-      "typeUpdate": "flexible",
-    },
-    "categoryConfig": {
-      // Enable this option when the store has more than 100 category items
-      "enableLargeCategories": false,
-      "deepLevel": 3,
-    },
-
-    /// Example: "pinnedProductTags": ["feature", "new"],
-    /// will show the tag before product title in the product list.
     "pinnedProductTags": [],
-
-    /// Enable WooCommerce Wholesale Prices
-    "EnableWooCommerceWholesalePrices": false,
-
-    //Require to select site when open app for multi sites
-    "IsRequiredSiteSelection": true
+    "hideOutOfStock": false,
+    "EnablePaidMembershipPro": false,
+    "EnableSyncCartToWebsite": true,
+    "ShowAllCoupons": true,
+    "DefaultLanguage": "es",
+    "EnableBottomAddToCart": false,
+    "Currencies": [
+      {
+        "symbol": "\$",
+        "smallestUnitRate": 1,
+        "decimalDigits": 0,
+        "currency": "COP",
+        "symbolBeforeTheNumber": true,
+        "currencyCode": "cop"
+      }
+    ],
+    "QueryRadiusDistance": 10,
+    "inAppUpdateForAndroid": {"enable": false, "typeUpdate": "flexible"},
+    "EnableAttributesLabelConfigurableProduct": ["color", "size"],
+    "GridCount": 3,
+    "AlwaysRefreshBlog": false,
+    "EnableFirebase": true,
+    "categoryConfig": {"enableLargeCategories": true, "deepLevel": 2},
+    "EnableAttributesConfigurableProduct": ["color", "size"],
+    "OnBoardOnlyShowFirstTime": false,
+    "EnableSyncCartFromWebsite": false,
+    "ShowCouponList": true,
+    "hideEmptyProductListRating": true,
+    "MinQueryRadiusDistance": 1,
+    "httpCache": true
   },
   "defaultDrawer": {
     "logo": "assets/images/logo.png",
-    "background": null,
     "items": [
-      {"type": "home", "show": true},
-      {"type": "blog", "show": true},
-      {"type": "categories", "show": true},
-      {"type": "cart", "show": true},
-      {"type": "profile", "show": true},
-      {"type": "login", "show": true},
-      {"type": "category", "show": true}
+      {"show": true, "type": "home"},
+      {"show": true, "type": "blog"},
+      {"show": true, "type": "categories"},
+      {"show": true, "type": "cart"},
+      {"show": true, "type": "profile"},
+      {"show": true, "type": "login"},
+      {"show": true, "type": "category"}
     ]
   },
   "defaultSettings": [
-    "biometrics",
     "products",
     "chat",
     "wishlist",
@@ -336,1111 +156,873 @@ Map<String, dynamic> environment = {
     "point",
     "rating",
     "privacy",
-    "about",
+    "about"
   ],
   "loginSetting": {
-    "IsRequiredLogin": false,
-    "showAppleLogin": true,
-    "showFacebook": false,
-    "showSMSLogin": true,
-    "showGoogleLogin": true,
-    "showPhoneNumberWhenRegister": false,
-    "requirePhoneNumberWhenRegister": false,
-    "isResetPasswordSupported": true,
-    "smsLoginAsDefault": false,
-
-    /// For Facebook login.
-    /// These configs are only used for FluxBuilder's Auto build feature.
-    /// To update manually, follow this below doc:
-    /// https://support.inspireui.com/help-center/articles/42/44/32/social-login#login
     "facebookAppId": "430258564493822",
+    "requirePhoneNumberWhenRegister": true,
     "facebookLoginProtocolScheme": "fb430258564493822",
-
-    // This config is used to apple for Wordpress site
-    "appleLoginSetting": {
-      "iOSBundleId": "com.inspireui.mstore.flutter",
-      "appleAccountTeamID": "S9RPAM8224"
-    }
+    "smsLoginAsDefault": false,
+    "showGoogleLogin": false,
+    "showAppleLogin": false,
+    "showPhoneNumberWhenRegister": false,
+    "showSMSLogin": false,
+    "IsRequiredLogin": true,
+    "isResetPasswordSupported": true,
+    "facebookClientToken": "",
+    "showFacebook": false
   },
-  "oneSignalKey": {"enable": false, "appID": ""},
-
-  "onBoardingConfig": {
-    'enableOnBoarding': true,
-    'version': 1,
-    'autoCropImageByDesign': true,
-    'isOnlyShowOnFirstTime': true,
-    "showLanguage": true,
-    'data': [
-      {
-        'title': 'Welcome to FluxStore',
-        'image': 'assets/images/fogg-delivery-1.png',
-        'desc': 'Fluxstore is on the way to serve you. '
-      },
-      {
-        'title': 'Connect Surrounding World',
-        'image': 'assets/images/fogg-uploading-1.png',
-        'desc':
-            'See all things happening around you just by a click in your phone. Fast, convenient and clean.'
-      },
-      {
-        'title': "Let's Get Started",
-        'image': 'assets/images/fogg-order-completed.png',
-        'desc': "Waiting no more, let's see what we get!"
-      }
-    ],
-  },
-
-  "vendorOnBoardingData": [
-    {
-      'title': 'Welcome aboard',
-      'image': 'assets/images/searching.png',
-      'desc': 'Just a few more steps to become our vendor'
-    },
-    {
-      'title': 'Let\'s Get Started',
-      'image': 'assets/images/manage.png',
-      'desc': 'Good Luck for great beginnings.'
-    }
-  ],
-
-  /// ➡️ lib/common/advertise.dart
-  "adConfig": {
+  "oneSignalKey": {
     "enable": false,
-    "facebookTestingId": "",
-    "googleTestingId": [],
+    "appID": "8b45b6db-7421-45e1-85aa-75e597f62714"
+  },
+  "onBoardingConfig": {
+    "enableOnBoarding": true,
+    "version": 1,
+    "autoCropImageByDesign": true,
+    "isOnlyShowOnFirstTime": true,
+    "showLanguage": true,
+    "data": [
+      {
+        "title": "Welcome to FluxStore",
+        "image": "assets/images/fogg-delivery-1.png",
+        "desc": "Fluxstore is on the way to serve you. "
+      },
+      {
+        "title": "Connect Surrounding World",
+        "image": "assets/images/fogg-uploading-1.png",
+        "desc":
+            "See all things happening around you just by a click in your phone. Fast, convenient and clean."
+      },
+      {
+        "title": "Let's Get Started",
+        "image": "assets/images/fogg-order-completed.png",
+        "desc": "Waiting no more, let's see what we get!"
+      }
+    ]
+  },
+  "adConfig": {
     "ads": [
       {
-        "type": "banner",
-        "provider": "google",
         "iosId": "ca-app-pub-3940256099942544/2934735716",
-        "androidId": "ca-app-pub-3940256099942544/6300978111",
-        "showOnScreens": ["home", "search"],
         "waitingTimeToDisplay": 2,
+        "showOnScreens": ["home", "search"],
+        "provider": "google",
+        "type": "banner",
+        "androidId": "ca-app-pub-3940256099942544/6300978111"
       },
       {
-        "type": "banner",
-        "provider": "google",
         "iosId": "ca-app-pub-2101182411274198/5418791562",
-        "androidId": "ca-app-pub-2101182411274198/4052745095",
-
-        /// "showOnScreens": ["home", "category", "product-detail"],
-      },
-      {
-        "type": "interstitial",
         "provider": "google",
-        "iosId": "ca-app-pub-3940256099942544/4411468910",
-        "androidId": "ca-app-pub-3940256099942544/4411468910",
-        "showOnScreens": ["profile"],
-        "waitingTimeToDisplay": 5,
-      },
-      {
-        "type": "reward",
-        "provider": "google",
-        "iosId": "ca-app-pub-3940256099942544/1712485313",
-        "androidId": "ca-app-pub-3940256099942544/4411468910",
-        "showOnScreens": ["cart"],
-
-        /// "waitingTimeToDisplay": 8,
-      },
-      {
         "type": "banner",
-        "provider": "facebook",
-        "iosId": "IMG_16_9_APP_INSTALL#430258564493822_876131259906548",
-        "androidId": "IMG_16_9_APP_INSTALL#430258564493822_489007588618919",
-        "showOnScreens": ["home"],
-
-        /// "waitingTimeToDisplay": 8,
+        "androidId": "ca-app-pub-2101182411274198/4052745095"
       },
       {
+        "iosId": "ca-app-pub-3940256099942544/4411468910",
+        "waitingTimeToDisplay": 5,
+        "showOnScreens": ["profile"],
+        "provider": "google",
         "type": "interstitial",
-        "provider": "facebook",
-        "iosId": "430258564493822_489092398610438",
-        "androidId": "IMG_16_9_APP_INSTALL#430258564493822_489092398610438",
-
-        /// "showOnScreens": ["profile"],
-        /// "waitingTimeToDisplay": 8,
+        "androidId": "ca-app-pub-3940256099942544/4411468910"
       },
+      {
+        "iosId": "ca-app-pub-3940256099942544/1712485313",
+        "provider": "google",
+        "showOnScreens": ["cart"],
+        "type": "reward",
+        "androidId": "ca-app-pub-3940256099942544/4411468910"
+      },
+      {
+        "iosId": "IMG_16_9_APP_INSTALL#430258564493822_876131259906548",
+        "showOnScreens": ["home"],
+        "provider": "facebook",
+        "type": "banner",
+        "androidId": "IMG_16_9_APP_INSTALL#430258564493822_489007588618919"
+      },
+      {
+        "iosId": "430258564493822_489092398610438",
+        "provider": "facebook",
+        "type": "interstitial",
+        "androidId": "IMG_16_9_APP_INSTALL#430258564493822_489092398610438"
+      }
     ],
-
-    /// "adMobAppId" is only used for FluxBuilder's Auto build feature.
-    /// To update manually, follow this below doc:
-    /// https://support.inspireui.com/help-center/articles/42/44/17/admob-and-facebook-ads#2-setup-google-admob-for-flutter
+    "enable": false,
+    "googleTestingId": [],
     "adMobAppIdIos": "ca-app-pub-7432665165146018~2664444130",
-    "adMobAppIdAndroid": "ca-app-pub-7432665165146018~2664444130",
+    "facebookTestingId": "",
+    "adMobAppIdAndroid": "ca-app-pub-7432665165146018~2664444130"
   },
-
-  /// ➡️ lib/common/dynamic_link.dart
   "firebaseDynamicLinkConfig": {
+    "iOSAppStoreId": "1469772800",
+    "androidPackageName": "com.motohelp.app",
     "isEnabled": true,
-    "shortDynamicLinkEnable": true,
-
-    /// Domain is the domain name for your product.
-    /// Let’s assume here that your product domain is “example.com”.
-    /// Then you have to mention the domain name as : https://example.page.link.
-    "uriPrefix": "https://fluxstoreinspireui.page.link",
-    //The link your app will open
-    "link": "https://mstore.io/",
-    //----------* Android Setting *----------//
-    "androidPackageName": "com.inspireui.fluxstore",
     "androidAppMinimumVersion": 1,
-    //----------* iOS Setting *----------//
-    "iOSBundleId": "com.inspireui.mstore.flutter",
-    "iOSAppMinimumVersion": "1.0.1",
-    "iOSAppStoreId": "1469772800"
+    "link": "http://motohelp.com.co",
+    "uriPrefix": "http://motohelp.com.co",
+    "shortDynamicLinkEnable": true,
+    "iOSBundleId": "com.motohelp.flutter",
+    "iOSAppMinimumVersion": "1.0.1"
   },
-
-  /// ➡️ lib/common/languages.dart
   "languagesInfo": [
-    // 1 English - intl_en.arb
     {
+      "storeViewCode": "",
+      "code": "en",
       "name": "English",
       "icon": "assets/images/country/gb.png",
-      "code": "en",
-      "text": "English",
-      "storeViewCode": ""
+      "text": "English"
     },
-    // 2 Hindi - intl_hi.arb
     {
+      "storeViewCode": "hi",
+      "code": "hi",
       "name": "Hindi",
       "icon": "assets/images/country/in.png",
-      "code": "hi",
-      "text": "हिन्दी",
-      "storeViewCode": "hi"
+      "text": "हिन्दी"
     },
-    // 3 Spanish - intl_es.arb
     {
-      "name": "Spanish",
-      "icon": "assets/images/country/es.png",
+      "storeViewCode": "",
       "code": "es",
-      "text": "Español",
-      "storeViewCode": ""
+      "icon": "assets/images/country/es.png",
+      "name": "Spanish",
+      "text": "Español"
     },
-    // 4 French - intl_fr.arb
     {
+      "storeViewCode": "fr",
+      "code": "fr",
       "name": "French",
       "icon": "assets/images/country/fr.png",
-      "code": "fr",
-      "text": "Français",
-      "storeViewCode": "fr"
+      "text": "Français"
     },
-    // 5 Arabic - intl_ar.arb
     {
+      "storeViewCode": "ar",
+      "code": "ar",
       "name": "Arabic",
       "icon": "assets/images/country/ar.png",
-      "code": "ar",
-      "text": "العربية",
-      "storeViewCode": "ar"
+      "text": "العربية"
     },
-    // 6 Russian - intl_ru.arb
     {
-      "name": "Russian",
-      "icon": "assets/images/country/ru.png",
+      "storeViewCode": "ru",
       "code": "ru",
-      "text": "Русский",
-      "storeViewCode": "ru"
+      "icon": "assets/images/country/ru.png",
+      "name": "Russian",
+      "text": "Русский"
     },
-    // 7 Indonesian - intl_id.arb
     {
+      "storeViewCode": "id",
+      "code": "id",
       "name": "Indonesian",
       "icon": "assets/images/country/id.png",
-      "code": "id",
-      "text": "Bahasa Indonesia",
-      "storeViewCode": "id"
+      "text": "Bahasa Indonesia"
     },
-    // 8 Japanese - intl_ja.arb
     {
+      "storeViewCode": "",
+      "code": "ja",
       "name": "Japanese",
       "icon": "assets/images/country/ja.png",
-      "code": "ja",
-      "text": "日本語",
-      "storeViewCode": ""
+      "text": "日本語"
     },
-    // 9 Korean - intl_ko.arb
     {
-      "name": "Korean",
-      "icon": "assets/images/country/ko.png",
+      "storeViewCode": "ko",
       "code": "ko",
-      "text": "한국어/조선말",
-      "storeViewCode": "ko"
+      "icon": "assets/images/country/ko.png",
+      "name": "Korean",
+      "text": "한국어/조선말"
     },
-    // 10 Vietnamese - intl_vi.arb
     {
-      "name": "Vietnamese",
-      "icon": "assets/images/country/vn.png",
+      "storeViewCode": "",
       "code": "vi",
-      "text": "Tiếng Việt",
-      "storeViewCode": ""
+      "icon": "assets/images/country/vn.png",
+      "name": "Vietnamese",
+      "text": "Tiếng Việt"
     },
-    // 11 Romanian - intl_ro.arb
     {
-      "name": "Romanian",
-      "icon": "assets/images/country/ro.png",
+      "storeViewCode": "ro",
       "code": "ro",
-      "text": "Românește",
-      "storeViewCode": "ro"
+      "icon": "assets/images/country/ro.png",
+      "name": "Romanian",
+      "text": "Românește"
     },
-    // 12 Turkish - intl_tr.arb
     {
+      "storeViewCode": "tr",
+      "code": "tr",
       "name": "Turkish",
       "icon": "assets/images/country/tr.png",
-      "code": "tr",
-      "text": "Türkçe",
-      "storeViewCode": "tr"
+      "text": "Türkçe"
     },
-    // 13 Italian - intl_it.arb
     {
+      "storeViewCode": "it",
+      "code": "it",
       "name": "Italian",
       "icon": "assets/images/country/it.png",
-      "code": "it",
-      "text": "Italiano",
-      "storeViewCode": "it"
+      "text": "Italiano"
     },
-    // 14 German - intl_de.arb
     {
-      "name": "German",
-      "icon": "assets/images/country/de.png",
+      "storeViewCode": "de",
       "code": "de",
-      "text": "Deutsch",
-      "storeViewCode": "de"
+      "icon": "assets/images/country/de.png",
+      "name": "German",
+      "text": "Deutsch"
     },
-    // 15 Brazilian Portuguese - intl_pt_BR.arb
     {
-      "name": "Brazilian Portuguese",
-      "icon": "assets/images/country/br.png",
-      "code": "pt_BR",
-      "text": "Português do Brasil",
-      "storeViewCode": ""
-    },
-    // 16 Portuguese from Portugal - intl_pt_PT.arb
-    {
-      "name": "Portuguese from Portugal",
+      "storeViewCode": "pt",
+      "code": "pt",
+      "name": "Portuguese",
       "icon": "assets/images/country/pt.png",
-      "code": "pt_PT",
-      "text": "Português de Portugal",
-      "storeViewCode": ""
+      "text": "Português"
     },
-    // 17 Hungarian - intl_hu.arb
     {
+      "storeViewCode": "hu",
+      "code": "hu",
       "name": "Hungarian",
       "icon": "assets/images/country/hu.png",
-      "code": "hu",
-      "text": "Magyar nyelv",
-      "storeViewCode": "hu"
+      "text": "Magyar nyelv"
     },
-    // 18 Hebrew - intl_he.arb
     {
+      "storeViewCode": "he",
+      "code": "he",
       "name": "Hebrew",
       "icon": "assets/images/country/he.png",
-      "code": "he",
-      "text": "עִבְרִית",
-      "storeViewCode": "he"
+      "text": "עִבְרִית"
     },
-    // 19 Thai - intl_th.arb
     {
-      "name": "Thai",
-      "icon": "assets/images/country/th.png",
+      "storeViewCode": "th",
       "code": "th",
-      "text": "ภาษาไทย",
-      "storeViewCode": "th"
+      "icon": "assets/images/country/th.png",
+      "name": "Thai",
+      "text": "ภาษาไทย"
     },
-    // 20 Dutch - intl_nl.arb
     {
+      "storeViewCode": "nl",
+      "code": "nl",
       "name": "Dutch",
       "icon": "assets/images/country/nl.png",
-      "code": "nl",
-      "text": "Nederlands",
-      "storeViewCode": "nl"
+      "text": "Nederlands"
     },
-    // 21 Serbian - intl_sr.arb
     {
+      "storeViewCode": "sr",
+      "code": "sr",
       "name": "Serbian",
       "icon": "assets/images/country/sr.jpeg",
-      "code": "sr",
-      "text": "српски",
-      "storeViewCode": "sr"
+      "text": "српски"
     },
-    // 22 Polish - intl_pl.arb
     {
-      "name": "Polish",
-      "icon": "assets/images/country/pl.png",
+      "storeViewCode": "pl",
       "code": "pl",
-      "text": "Język polski",
-      "storeViewCode": "pl"
+      "icon": "assets/images/country/pl.png",
+      "name": "Polish",
+      "text": "Język polski"
     },
-    // 23 Persian - intl_fa.arb
     {
+      "storeViewCode": "",
+      "code": "fa",
       "name": "Persian",
       "icon": "assets/images/country/fa.png",
-      "code": "fa",
-      "text": "زبان فارسی",
-      "storeViewCode": ""
+      "text": "زبان فارسی"
     },
-    // 24 Ukrainian - intl_uk.arb
     {
+      "storeViewCode": "",
+      "code": "uk",
       "name": "Ukrainian",
       "icon": "assets/images/country/uk.png",
-      "code": "uk",
-      "text": "Українська мова",
-      "storeViewCode": ""
+      "text": "Українська мова"
     },
-    // 25 Bengali - intl_bn.arb
     {
+      "storeViewCode": "",
+      "code": "bn",
       "name": "Bengali",
       "icon": "assets/images/country/bn.png",
-      "code": "bn",
-      "text": "বাংলা",
-      "storeViewCode": ""
+      "text": "বাংলা"
     },
-    // 26 Tamil - intl_ta.arb
     {
+      "storeViewCode": "",
+      "code": "ta",
       "name": "Tamil",
       "icon": "assets/images/country/ta.png",
-      "code": "ta",
-      "text": "தமிழ்",
-      "storeViewCode": ""
+      "text": "தமிழ்"
     },
-    // 27 Kurdish - intl_ku.arb
     {
-      "name": "Kurdish",
-      "icon": "assets/images/country/ku.png",
+      "storeViewCode": "",
       "code": "ku",
-      "text": "Kurdî / کوردی",
-      "storeViewCode": ""
+      "icon": "assets/images/country/ku.png",
+      "name": "Kurdish",
+      "text": "Kurdî / کوردی"
     },
-    // 28 Czech - intl_cs.arb
     {
-      "name": "Czech",
-      "icon": "assets/images/country/cs.png",
+      "storeViewCode": "cs",
       "code": "cs",
-      "text": "Čeština",
-      "storeViewCode": "cs"
+      "icon": "assets/images/country/cs.png",
+      "name": "Czech",
+      "text": "Čeština"
     },
-    // 29 Swedish - intl_sv.arb
     {
+      "storeViewCode": "",
+      "code": "sv",
       "name": "Swedish",
       "icon": "assets/images/country/sv.png",
-      "code": "sv",
-      "text": "Svenska",
-      "storeViewCode": ""
+      "text": "Svenska"
     },
-    // 30 Finland - intl_fi.arb
     {
+      "storeViewCode": "",
+      "code": "fi",
       "name": "Finland",
       "icon": "assets/images/country/fi.png",
-      "code": "fi",
-      "text": "Suomi",
-      "storeViewCode": ""
+      "text": "Suomi"
     },
-    // 31 Greek - intl_el.arb
     {
+      "storeViewCode": "",
+      "code": "el",
       "name": "Greek",
       "icon": "assets/images/country/el.png",
-      "code": "el",
-      "text": "Ελληνικά",
-      "storeViewCode": ""
+      "text": "Ελληνικά"
     },
-    // 32 Khmer - intl_km.arb
     {
+      "storeViewCode": "",
+      "code": "km",
       "name": "Khmer",
       "icon": "assets/images/country/km.png",
-      "code": "km",
-      "text": "ភាសាខ្មែរ",
-      "storeViewCode": ""
+      "text": "ភាសាខ្មែរ"
     },
-    // 33 Kannada - intl_kn.arb
     {
-      "name": "Kannada",
-      "icon": "assets/images/country/kn.png",
+      "storeViewCode": "",
       "code": "kn",
-      "text": "ಕನ್ನಡ",
-      "storeViewCode": ""
+      "icon": "assets/images/country/kn.png",
+      "name": "Kannada",
+      "text": "ಕನ್ನಡ"
     },
-    // 34 Marathi - intl_mr.arb
     {
-      "name": "Marathi",
-      "icon": "assets/images/country/mr.jpeg",
+      "storeViewCode": "",
       "code": "mr",
-      "text": "मराठी भाषा",
-      "storeViewCode": ""
+      "icon": "assets/images/country/mr.jpeg",
+      "name": "Marathi",
+      "text": "मराठी भाषा"
     },
-    // 35 Malay - intl_ms.arb
     {
+      "storeViewCode": "",
+      "code": "ms",
       "name": "Malay",
       "icon": "assets/images/country/ms.jpeg",
-      "code": "ms",
-      "text": "بهاس ملايو",
-      "storeViewCode": ""
+      "text": "بهاس ملايو"
     },
-    // 36 Bosnian - intl_bs.arb
     {
+      "storeViewCode": "",
+      "code": "bs",
       "name": "Bosnian",
       "icon": "assets/images/country/bs.png",
-      "code": "bs",
-      "text": "босански",
-      "storeViewCode": ""
+      "text": "босански"
     },
-    // 37 Lao - intl_lo.arb
     {
+      "storeViewCode": "",
+      "code": "lo",
       "name": "Lao",
       "icon": "assets/images/country/lo.png",
-      "code": "lo",
-      "text": "ພາສາລາວ",
-      "storeViewCode": ""
+      "text": "ພາສາລາວ"
     },
-    // 38 Slovak - intl_sk.arb
     {
+      "storeViewCode": "",
+      "code": "sk",
       "name": "Slovak",
       "icon": "assets/images/country/sk.png",
-      "code": "sk",
-      "text": "Slovaščina",
-      "storeViewCode": ""
+      "text": "Slovaščina"
     },
-    // 39 Swahili - intl_sw.arb
     {
+      "storeViewCode": "",
+      "code": "sw",
       "name": "Swahili",
       "icon": "assets/images/country/sw.png",
-      "code": "sw",
-      "text": "كِيْسَوَاحِيْلِيْ",
-      "storeViewCode": ""
+      "text": "كِيْسَوَاحِيْلِيْ"
     },
-    // 40 Chinese - intl_zh.arb
     {
-      "name": "Chinese",
-      "icon": "assets/images/country/zh.png",
+      "storeViewCode": "",
       "code": "zh",
-      "text": "中文",
-      "storeViewCode": ""
+      "icon": "assets/images/country/zh.png",
+      "name": "Chinese",
+      "text": "中文"
     },
-    // 41 Chinese Traditional - intl_zh_TW.arb
     {
+      "storeViewCode": "",
+      "code": "zh_TW",
       "name": "Chinese (traditional)",
       "icon": "assets/images/country/zh.png",
-      "code": "zh_TW",
-      "text": "漢語",
-      "storeViewCode": ""
+      "text": "漢語"
     },
-    // 42 Chinese Simplified - intl_zh_CN.arb
     {
+      "storeViewCode": "",
+      "code": "zh_CN",
       "name": "Chinese (simplified)",
       "icon": "assets/images/country/zh.png",
-      "code": "zh_CN",
-      "text": "汉语",
-      "storeViewCode": ""
+      "text": "汉语"
     },
-    // 43 Burmese - intl_my.arb
     {
+      "storeViewCode": "",
+      "code": "my",
       "name": "Burmese",
       "icon": "assets/images/country/my.png",
-      "code": "my",
-      "text": "မြန်မာဘာသာစကား",
-      "storeViewCode": ""
+      "text": "မြန်မာဘာသာစကား"
     },
-    // 44 Albanian - intl_sq.arb
     {
-      "name": "Albanian",
-      "icon": "assets/images/country/sq.png",
+      "storeViewCode": "",
       "code": "sq",
-      "text": "Shqip",
-      "storeViewCode": ""
+      "icon": "assets/images/country/sq.png",
+      "name": "Albanian",
+      "text": "Shqip"
     },
-    // 45 Danish - intl_da.arb
     {
-      "name": "Danish",
-      "icon": "assets/images/country/da.svg",
+      "storeViewCode": "",
       "code": "da",
-      "text": "Dansk",
-      "storeViewCode": ""
+      "icon": "assets/images/country/da.svg",
+      "name": "Danish",
+      "text": "Dansk"
     },
-    // 46 Tigrinya - intl_ti.arb
     {
+      "storeViewCode": "ti",
+      "code": "ti",
       "name": "Tigrinya",
       "icon": "assets/images/country/er.png",
-      "code": "ti",
-      "text": "ትግርኛ",
-      "storeViewCode": "ti"
+      "text": "ትግርኛ"
     },
-    // 47 Urdu - intl_ur.arb
     {
-      "name": "Urdu",
-      "icon": "assets/images/country/pk.png",
+      "storeViewCode": "",
       "code": "ur",
-      "text": "اُردُو",
-      "storeViewCode": ""
+      "icon": "assets/images/country/pk.png",
+      "name": "Urdu",
+      "text": "اُردُو"
     },
-    // 48 Azerbaijani- intl_az.arb
     {
+      "storeViewCode": "",
+      "code": "az",
       "name": "Azerbaijani",
       "icon": "assets/images/country/az.jpg",
-      "code": "az",
-      "text": "Azərbaycan dili",
-      "storeViewCode": ""
-    },
-    // 49 Kazakhstan - intl_kk.arb
-    {
-      "name": "Kazakhstan",
-      "icon": "assets/images/country/kz.png",
-      "code": "kk",
-      "text": "Қазақ тілі",
-      "storeViewCode": ""
-    },
-    // 50 Uzbek - intl_uz.arb
-    {
-      "name": "Uzbek",
-      "icon": "assets/images/country/uz.png",
-      "code": "uz",
-      "text": "O'zbek",
-      "storeViewCode": ""
-    },
-    // 51 Estonia - intl_et.arb
-    {
-      "name": "Estonia",
-      "icon": "assets/images/country/et.png",
-      "code": "et",
-      "text": "Eesti",
-      "storeViewCode": ""
+      "text": "Azərbaycan dili"
     }
   ],
-
-  /// ➡️  lib/common/config/payments.dart
   "paymentConfig": {
-    "DefaultCountryISOCode": "US",
-
-    "DefaultStateISOCode": "LA",
-
-    /// Enable the Shipping option from Checkout, support for the Digital Download
-    "EnableShipping": true,
-
-    /// Enable the address shipping.
-    /// Set false if use for the app like Download Digial Asset which is not required the shipping feature.
     "EnableAddress": true,
-
-    /// Allow customers to add note when order
-    "EnableCustomerNote": true,
-
-    /// Allow customers to add address location link to order note
+    "DefaultCountryISOCode": "COL",
     "EnableAddressLocationNote": false,
-
-    /// Allow both alphabetical and numerical characters in ZIP code
-    "EnableAlphanumericZipCode": false,
-
-    /// Enable the product review option
-    "EnableReview": true,
-
-    /// Enable the Google Maps picker from Billing Address.
-    "allowSearchingAddress": true,
-
-    "GuestCheckout": true,
-
-    /// Enable Payment option
-    "EnableOnePageCheckout": false,
-    "NativeOnePageCheckout": false,
-
-    "ShowWebviewCheckoutSuccessScreen": true,
-
-    /// This config is same with checkout page slug in the website
-    "CheckoutPageSlug": {"en": "checkout"},
-
-    /// Enable Credit card payment (only available for Fluxstore Shopipfy)
-    "EnableCreditCard": false,
-
-    /// Enable update order status to processing after checkout by COD on woo commerce
-    "UpdateOrderStatus": false,
-
-    /// Show order notes in order history detail.
-    "ShowOrderNotes": true,
-
-    /// Show Refund and Cancel button on Order Detail
+    "SmartCOD": {"amountStop": 200, "extraFee": 10, "enabled": true},
     "EnableRefundCancel": true,
-
-    /// If the order completed date is after this period (days), the refund button will be hidden.
+    "DefaultStateISOCode": "DC",
+    "GuestCheckout": true,
+    "UpdateOrderStatus": false,
+    "CheckoutPageSlug": {"en": "checkout"},
+    "EnableReview": true,
+    "EnableShipping": true,
+    "EnableCreditCard": false,
+    "NativeOnePageCheckout": true,
+    "EnableCustomerNote": true,
+    "EnableOnePageCheckout": false,
+    "EnableAlphanumericZipCode": false,
     "RefundPeriod": 7,
-
-    /// Apply the extra fee for the COD method
-    /// amountStop: Amount to stop charge the extra fee
-    "SmartCOD": {"enabled": true, "extraFee": 10, "amountStop": 200},
-
-    /// List ids to hide some unnecessary payment methods
-    "excludedPaymentIds": [],
-
-    /// Show Transaction Details in Order History Screen
-    "ShowTransactionDetails": true,
+    "allowSearchingAddress": true,
+    "ShowOrderNotes": true
   },
   "payments": {
-    "stripe_v2_apple_pay": "assets/icons/payment/apple-pay-mark.svg",
+    "tap": "assets/icons/payment/tap.png",
     "stripe_v2_google_pay": "assets/icons/payment/google-pay-mark.png",
-    "paypal": "assets/icons/payment/paypal.svg",
     "stripe": "assets/icons/payment/stripe.svg",
     "razorpay": "assets/icons/payment/razorpay.svg",
-    "tap": "assets/icons/payment/tap.png",
-    "paystack": "assets/icons/payment/paystack.png",
-    "myfatoorah_v2": "assets/icons/payment/myfatoorah.png",
-    "midtrans": "assets/icons/payment/midtrans.png",
-    "xendit_cc": "assets/icons/payment/xendit.png",
-    "expresspay_apple_pay": "assets/icons/payment/apple-pay-mark.svg",
-    "thai-promptpay-easy": "assets/icons/payment/prompt-pay.png",
-    "ppcp-gateway": "assets/icons/payment/paypal.svg",
+    "paypal": "assets/icons/payment/paypal.svg",
+    "stripe_v2_apple_pay": "assets/icons/payment/apple-pay-mark.svg"
   },
   "shopifyPaymentConfig": {
     "shopName": "FluxStore",
     "countryCode": "US",
     "productionMode": false,
     "paymentCardConfig": {
-      "enable": true,
-      "serverEndpoint": "https://test-stripe-nine.vercel.app",
+      "enable": false,
+      "serverEndpoint": "https://test-stripe-nine.vercel.app"
     },
     "applePayConfig": {
-      "enable": true,
-      "merchantId": "merchant.com.inspireui.fluxstore",
-    },
-    "googlePayConfig": {
-      "enable": true,
-      "stripePublishableKey": "pk_test_O3awus9i5mA2wIX9a7pU3MSi00gZPcpJWX",
+      "enable": false,
       "merchantId": "merchant.com.inspireui.fluxstore"
     },
+    "googlePayConfig": {
+      "enable": false,
+      "stripePublishableKey": "pk_test_O3awus9i5mA2wIX9a7pU3MSi00gZPcpJWX",
+      "merchantId": "merchant.com.inspireui.fluxstore"
+    }
   },
   "stripeConfig": {
-    "serverEndpoint": "https://stripe-server-node.vercel.app",
-    "publishableKey": "pk_test_syl720IY4iwLkNzmOeL7nz3J",
-    "paymentMethodIds": ["stripe"],
-    "enabled": true,
-    "enableApplePay": true,
+    "publishableKey":
+        "pk_test_51HNabPCinksNdU0OwGkZ6uMdZOrLT42NGJkBxmVJwx3oM5mafpJaQRfDHifJMg2iREDZxbPkR1TvDtmBeTyjmgv200mCojR2dG",
     "enableGooglePay": true,
-    "merchantDisplayName": "FluxStore",
-    "merchantIdentifier": "merchant.com.inspireui.mstore.flutter",
     "merchantCountryCode": "US",
     "useV1": false,
-    "returnUrl": "fluxstore://inspireui.com",
-
-    /// Enable this automatically captures funds when the customer authorizes the payment.
-    /// Disable will Place a hold on the funds when the customer authorizes the payment,
-    /// but don’t capture the funds until later. (Not all payment methods support this.)
-    /// https://stripe.com/docs/payments/capture-later
-    /// Default: false
+    "paymentMethodIds": [
+      "stripe",
+      "stripe",
+      "stripe",
+      "stripe",
+      "stripe",
+      "stripe",
+      "stripe",
+      "stripe",
+      "stripe"
+    ],
     "enableManualCapture": false,
-    "saveCardAfterCheckout": false,
-    "stripeApiVersion": 3,
+    "enabled": false,
+    "merchantDisplayName": "FluxStore",
+    "merchantIdentifier": "merchant.com.inspireui.mstore.flutter",
+    "serverEndpoint": "https://stripe-server-node.vercel.app",
+    "paymentMethodId": "stripe",
+    "enableApplePay": true,
+    "returnUrl": "fluxstore://inspireui.com"
   },
   "paypalConfig": {
     "clientId":
         "ASlpjFreiGp3gggRKo6YzXMyGM6-NwndBAQ707k6z3-WkSSMTPDfEFmNmky6dBX00lik8wKdToWiJj5w",
+    "production": false,
+    "paymentMethodId": "paypal",
     "secret":
         "ECbFREri7NFj64FI_9WzS6A0Az2DqNLrVokBo0ZBu4enHZKMKOvX45v9Y1NBPKFr6QJv2KaSp5vk5A1G",
-    "returnUrl":
-        "com.inspireui.fluxstore://paypalpay", // Example: "your.android.package.name:://paypalpay"
-    "production": false,
-    "paymentMethodId": "paypal", //ppcp-gateway
-    "enabled": true,
-    "nativeMode": false,
+    "enabled": true
   },
   "razorpayConfig": {
+    "paymentMethodId": "razorpay",
     "keyId": "rzp_test_SDo2WKBNQXDk5Y",
     "keySecret": "RrgfT3oxbJdaeHSzvuzaJRZf",
-    "paymentMethodId": "razorpay",
     "enabled": true
   },
   "tapConfig": {
     "SecretKey": "sk_test_XKokBfNWv6FIYuTMg5sLPjhJ",
     "paymentMethodId": "tap",
-    "enabled": true
+    "enabled": false
   },
   "mercadoPagoConfig": {
-    "accessToken":
-        "TEST-5726912977510261-102413-65873095dc5b0a877969b7f6ffcceee4-613803978",
     "production": false,
     "paymentMethodId": "woo-mercado-pago-basic",
+    "accessToken":
+        "TEST-5726912977510261-102413-65873095dc5b0a877969b7f6ffcceee4-613803978",
     "enabled": true
   },
   "payTmConfig": {
-    "paymentMethodId": "paytm",
-    "merchantId": "your-merchant-id",
     "production": false,
+    "merchantId": "your-merchant-id",
+    "paymentMethodId": "paytm",
     "enabled": true
   },
   "payStackConfig": {
-    'paymentMethodId': 'paystack',
-    'publicKey': 'pk_test_a1a37615c9ca90dead5dd84dedbb5e476b640a6f',
-    'secretKey': 'sk_test_d833fcaa6c02a61a9431d2026046c0517888a4a7',
-    'supportedCurrencies': ['ZAR'],
-    'enableMobileMoney': true,
-    'production': false,
-    'enabled': true
-  },
-  "flutterwaveConfig": {
-    'paymentMethodId': 'rave',
-    'publicKey': 'FLWPUBK_TEST-72b90e0734da8c9e43916adf63cd711e-X',
-    'production': false,
-    'enabled': true
-  },
-  "myFatoorahConfig": {
-    "paymentMethodId": "myfatoorah_v2",
-    "apiToken":
-        "rLtt6JWvbUHDDhsZnfpAhpYk4dxYDQkbcPTyGaKp2TYqQgG7FGZ5Th_WD53Oq8Ebz6A53njUoo1w3pjU1D4vs_ZMqFiz_j0urb_BH9Oq9VZoKFoJEDAbRZepGcQanImyYrry7Kt6MnMdgfG5jn4HngWoRdKduNNyP4kzcp3mRv7x00ahkm9LAK7ZRieg7k1PDAnBIOG3EyVSJ5kK4WLMvYr7sCwHbHcu4A5WwelxYK0GMJy37bNAarSJDFQsJ2ZvJjvMDmfWwDVFEVe_5tOomfVNt6bOg9mexbGjMrnHBnKnZR1vQbBtQieDlQepzTZMuQrSuKn-t5XZM7V6fCW7oP-uXGX-sMOajeX65JOf6XVpk29DP6ro8WTAflCDANC193yof8-f5_EYY-3hXhJj7RBXmizDpneEQDSaSz5sFk0sV5qPcARJ9zGG73vuGFyenjPPmtDtXtpx35A-BVcOSBYVIWe9kndG3nclfefjKEuZ3m4jL9Gg1h2JBvmXSMYiZtp9MR5I6pvbvylU_PP5xJFSjVTIz7IQSjcVGO41npnwIxRXNRxFOdIUHn0tjQ-7LwvEcTXyPsHXcMD8WtgBh-wxR8aKX7WPSsT1O8d8reb2aR7K3rkV3K82K_0OgawImEpwSvp9MNKynEAJQS6ZHe_J_l77652xwPNxMRTMASk1ZsJL",
-    'accountCountry': 'KW',
-    // KW (KUWAIT), SA (SAUDI_ARABIA), BH (BAHRAIN), AR (UNITED_ARAB_EMIRATES), QA (QATAR), OM (OMAN), JO (JORDAN), EG (EGYPT)
     "production": false,
+    "paymentMethodId": "paystack",
+    "publicKey": "pk_test_a1a37615c9ca90dead5dd84dedbb5e476b640a6f",
     "enabled": true
   },
+  "flutterwaveConfig": {
+    "production": false,
+    "paymentMethodId": "rave",
+    "publicKey": "FLWPUBK_TEST-72b90e0734da8c9e43916adf63cd711e-X",
+    "enabled": true
+  },
+  "myFatoorahConfig": {
+    "apiToken":
+        "rLtt6JWvbUHDDhsZnfpAhpYk4dxYDQkbcPTyGaKp2TYqQgG7FGZ5Th_WD53Oq8Ebz6A53njUoo1w3pjU1D4vs_ZMqFiz_j0urb_BH9Oq9VZoKFoJEDAbRZepGcQanImyYrry7Kt6MnMdgfG5jn4HngWoRdKduNNyP4kzcp3mRv7x00ahkm9LAK7ZRieg7k1PDAnBIOG3EyVSJ5kK4WLMvYr7sCwHbHcu4A5WwelxYK0GMJy37bNAarSJDFQsJ2ZvJjvMDmfWwDVFEVe_5tOomfVNt6bOg9mexbGjMrnHBnKnZR1vQbBtQieDlQepzTZMuQrSuKn-t5XZM7V6fCW7oP-uXGX-sMOajeX65JOf6XVpk29DP6ro8WTAflCDANC193yof8-f5_EYY-3hXhJj7RBXmizDpneEQDSaSz5sFk0sV5qPcARJ9zGG73vuGFyenjPPmtDtXtpx35A-BVcOSBYVIWe9kndG3nclfefjKEuZ3m4jL9Gg1h2JBvmXSMYiZtp9MR5I6pvbvylU_PP5xJFSjVTIz7IQSjcVGO41npnwIxRXNRxFOdIUHn0tjQ-7LwvEcTXyPsHXcMD8WtgBh-wxR8aKX7WPSsT1O8d8reb2aR7K3rkV3K82K_0OgawImEpwSvp9MNKynEAJQS6ZHe_J_l77652xwPNxMRTMASk1ZsJL",
+    "production": false,
+    "paymentMethodId": "myfatoorah_v2",
+    "accountCountry": "KW",
+    "enabled": false
+  },
   "midtransConfig": {
-    'paymentMethodId': 'midtrans',
-    'clientKey': 'SB-Mid-client-he8W_FIlvugfA2RD',
-    'enabled': true
+    "paymentMethodId": "midtrans",
+    "clientKey": "SB-Mid-client-he8W_FIlvugfA2RD",
+    "enabled": false
   },
   "inAppPurchaseConfig": {
-    'consumableProductIDs': [
-      'com.inspireui.fluxstore.test',
-    ],
-    'nonConsumableProductIDs': [],
-    'subscriptionProductIDs': [
-      'com.inspireui.fluxstore.subscription.test',
-    ],
+    "consumableProductIDs": ["com.inspireui.fluxstore.test"],
+    "nonConsumableProductIDs": [],
+    "subscriptionProductIDs": ["com.inspireui.fluxstore.subscription.test"],
     "enabled": false
   },
   "xenditConfig": {
-    'paymentMethodId': 'xendit',
-    'secretApiKey':
-        'xnd_development_4E9ql5zFiC1BBmhK2r7wr9mNYyyvjLs0fIal00tGuHEj1iEYCu7B7tCUudv3Xe',
-    'enabled': true
+    "paymentMethodId": "xendit",
+    "secretApiKey":
+        "xnd_development_4E9ql5zFiC1BBmhK2r7wr9mNYyyvjLs0fIal00tGuHEj1iEYCu7B7tCUudv3Xe",
+    "enabled": false
   },
   "expressPayConfig": {
-    'paymentMethodId': 'shahbandrpay',
-    'merchantKey': 'b2be2ffc-c8b9-11ed-82a9-42eb4e39c8ae',
-    'merchantPassword': '4a00a5fd3c63dd2b743c75746af6ffe2',
+    "paymentMethodId": "shahbandrpay",
+    "merchantKey": "b2be2ffc-c8b9-11ed-82a9-42eb4e39c8ae",
+    "merchantPassword": "4a00a5fd3c63dd2b743c75746af6ffe2",
     "merchantId": "merchant.com.inspireui.mstore.flutter",
     "production": false,
-    'enabled': true
+    "enabled": true
   },
   "thaiPromptPayConfig": {
-    'paymentMethodId': 'thai-promptpay-easy',
-    'enabled': true
+    "paymentMethodId": "thai-promptpay-easy",
+    "enabled": false
   },
-
-  "defaultCountryShipping": [],
-
-  /// config for after shipping
+  "defaultCountryShipping": [
+    {"iosCode": "CO", "icon": null, "name": "Colombia"}
+  ],
   "afterShip": {
     "api": "e2e9bae8-ee39-46a9-a084-781d0139274f",
     "tracking_url": "https://fluxstore.aftership.com"
   },
-
-  /// Ref: https://support.inspireui.com/help-center/articles/3/25/16/google-map-address
   "googleApiKey": {
-    'android': 'AIzaSyDSNYVC-8DU9BTcyqkeN9c5pgVhwOBAvGg',
-    'ios': 'AIzaSyDSNYVC-8DU9BTcyqkeN9c5pgVhwOBAvGg',
-    'web': 'AIzaSyDSNYVC-8DU9BTcyqkeN9c5pgVhwOBAvGg'
+    "web": "AIzaSyDW3uXzZepWBPi-69BIYKyS-xo9NjFSFhQ",
+    "android": "AIzaSyDW3uXzZepWBPi-69BIYKyS-xo9NjFSFhQ",
+    "ios": "AIzaSyDW3uXzZepWBPi-69BIYKyS-xo9NjFSFhQ"
   },
-
-  /// ➡️ lib/common/products.dart
   "productDetail": {
-    "height": 0.6,
-    "marginTop": 0,
-    "safeArea": false,
-    "showVideo": true,
-    "showBrand": true,
-    "showThumbnailAtLeast": 1,
-    "layout": "simpleType",
-    "borderRadius": 3.0,
-
-    /// Enable this to show selected image variant in the top banner.
-    "ShowSelectedImageVariant": true,
-
-    "autoPlayGallery": false,
-    "SliderShowGoBackButton": true,
-    "ShowImageGallery": true,
-
-    /// "SliderIndicatorType" can be "number", "dot". Default: "number".
-    "SliderIndicatorType": 'number',
-
-    /// Enable this to add a white background to top banner for transparent product image.
-    "ForceWhiteBackground": false,
-
-    /// Auto select first attribute of variable product if there is no default attribute.
-    "AutoSelectFirstAttribute": true,
-
-    /// Enable this to show review in product description.
-    "enableReview": true,
-    "attributeImagesSize": 50.0,
-    "showSku": true,
-    "showStockQuantity": true,
-    "showProductCategories": true,
-    "showProductTags": true,
-    "hideInvalidAttributes": false,
-
-    /// Enable this to show a quantity selector in product list.
-    "showQuantityInList": false,
-
-    /// Enable this to show Add to cart icon in search result list.
-    "showAddToCartInSearchResult": true,
-
-    /// Increase this number if you have yellow layout overflow error in product list.
-    /// Should check "RatioProductImage" before changing this number.
-    "productListItemHeight": 125,
-
-    /// Limit the time a user can make an appointment. Units are in days.
-    /// If the value is not set, there will be no limit on the appointment date.
-    /// For example:
-    ///  Today is October 11, 2020 and limitDayBooking is 7 days.
-    /// --> So users can only book appointments from October 11, 2020 to October 18, 2020
-    "limitDayBooking": 14,
-
-    // Hide or show related products in product detail screen.
-    "showRelatedProductFromSameStore": true,
     "showRelatedProduct": true,
-    "showRecentProduct": true,
-
-    // Product image layout
-    "productImageLayout": "page",
-
-    "expandDescription": true,
-    "expandInfors": true,
-    "expandCategories": true,
-    "expandTags": true,
-    "expandReviews": true,
-    "expandTaxonomies": true,
-    "expandListingMenu": true,
-    "expandMap": true,
-
-    "fixedBuyButtonToBottom": false
+    "showQuantityInList": false,
+    "ForceWhiteBackground": false,
+    "enableReview": true,
+    "showSku": true,
+    "SliderShowGoBackButton": true,
+    "safeArea": false,
+    "AutoSelectFirstAttribute": true,
+    "showAddToCartInSearchResult": true,
+    "height": 0.6,
+    "attributeImagesSize": 50,
+    "productListItemHeight": 125,
+    "showProductTags": true,
+    "showProductCategories": true,
+    "hideInvalidAttributes": false,
+    "layout": "simpleType",
+    "showStockQuantity": true,
+    "ShowSelectedImageVariant": true,
+    "borderRadius": 3,
+    "ShowImageGallery": true,
+    "autoPlayGallery": false,
+    "SliderIndicatorType": "number",
+    "showVideo": true,
+    "showRelatedProductFromSameStore": true,
+    "showBrand": true,
+    "limitDayBooking": 14,
+    "showThumbnailAtLeast": 1,
+    "marginTop": 0
   },
   "blogDetail": {
-    'showComment': true,
-    'showHeart': true,
-    'showSharing': true,
-    'showTextAdjustment': true,
-    'enableAudioSupport': false,
-    'showRelatedBlog': true,
-    'showAuthorInfo': true
+    "showTextAdjustment": true,
+    "showComment": true,
+    "showHeart": true,
+    "showSharing": true,
+    "enableAudioSupport": false
   },
   "productVariantLayout": {
-    "color": "color",
     "size": "box",
-    "height": "option",
-    "color-image": "image"
+    "color-image": "image",
+    "color": "color",
+    "height": "option"
   },
   "productAddons": {
-    /// Set the allowed file type for file upload.
-    /// On iOS will open Photos app.
+    "allowedCustomType": ["png", "pdf", "docx"],
+    "allowMultiple": false,
     "allowImageType": true,
     "allowVideoType": true,
-
-    /// Enable to allow upload files other than image/video.
-    /// On iOS will open Files app.
     "allowCustomType": true,
-
-    /// Set allowed file extensions for custom type.
-    /// Leave empty ("allowedCustomType": []) to support all extensions.
-    "allowedCustomType": ["png", "pdf", "docx"],
-
-    /// NOTE: WordPress might restrict some file types for security purpose.
-    /// To allow it, you can add this line to wp-config.php:
-    /// define('ALLOW_UNFILTERED_UPLOADS', true);
-    /// - which is NOT recommended.
-    /// Instead, try to use a plugin like https://wordpress.org/plugins/wp-extra-file-types
-    /// to allow custom file types.
-    /// Allow selecting multiple files for upload. Default: false.
-    "allowMultiple": false,
-
-    /// Set the file size limit (in MB) for upload. Recommended: <15MB.
-    "fileUploadSizeLimit": 5.0
+    "fileUploadSizeLimit": 5
   },
-  "cartDetail": {"minAllowTotalCartValue": 0, "maxAllowQuantity": 10},
-
-  /// Translate the product variant by languages
-  /// As it could be limited with the REST API when request variant
+  "cartDetail": {"maxAllowQuantity": 10, "minAllowTotalCartValue": 0},
   "productVariantLanguage": {
+    "ar": {
+      "color-image": "اللون",
+      "color": "اللون",
+      "size": "بحجم",
+      "height": "ارتفاع"
+    },
+    "vi": {
+      "color-image": "Màu",
+      "color": "Màu",
+      "size": "Kích thước",
+      "height": "Chiều Cao"
+    },
     "en": {
       "color": "Color",
       "size": "Size",
-      "height": "Height",
-      "color-image": "Color"
-    },
-    "ar": {
-      "color": "اللون",
-      "size": "بحجم",
-      "height": "ارتفاع",
-      "color-image": "اللون"
-    },
-    "vi": {
-      "color": "Màu",
-      "size": "Kích thước",
-      "height": "Chiều Cao",
-      "color-image": "Màu"
+      "color-image": "Color",
+      "height": "Height"
     }
   },
-
-  /// Exclude these categories from the list, for example "311,23,208"
-  "excludedCategory": "311",
+  "excludedCategory": 311,
   "saleOffProduct": {
-    /// Show Count Down for product type SaleOff
     "ShowCountDown": true,
     "HideEmptySaleOffLayout": false,
     "Color": "#C7222B"
   },
-
-  /// This is strict mode option to check the `visible` option from product variant
-  /// https://tppr.me/4DJJs - default value is false
   "notStrictVisibleVariant": true,
-
-  /// ➡️ lib/common/smartchat.dart
   "configChat": {
-    "EnableSmartChat": true,
-    "UseRealtimeChat": false,
-    "showOnScreens": ["profile"],
+    "showOnScreens": ["profile", "home"],
     "hideOnScreens": [],
+    "UseRealtimeChat": false,
     "version": "2",
+    "EnableSmartChat": true
   },
   "openAIConfig": {
-    'enableChat': true,
-    'supabaseUrl': 'https://rtkrqvtslujdzjxhjocu.supabase.co',
-    'supabaseAnonKey':
-        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0a3JxdnRzbHVqZHpqeGhqb2N1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzU5OTI5MzMsImV4cCI6MTk5MTU2ODkzM30.qKtfNHhL6AKqGsmDfjMq90bIWIWlnN3UVgnwcLF_vGY',
-    'revenueAppleApiKey': 'appl_XNtOUZPHwUzelbvwdSezFsMrNeT',
-    'revenueGoogleApiKey': 'goog_kpDTQdItiHkSrdjDdvLIwAdjOzG',
-    'revenueProductsIos': [
-      'gpt_3999_1y_1w0',
-      'gpt_399_1m_1w0',
-    ],
-    'revenueProductsAndroid': [
-      'gpt_pro_v1',
-    ],
-    'enableSubscription': false,
-    'enableInputKey': false,
+    "enableChat": false,
+    "supabaseUrl": "https://rtkrqvtslujdzjxhjocu.supabase.co",
+    "supabaseAnonKey":
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ0a3JxdnRzbHVqZHpqeGhqb2N1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzU5OTI5MzMsImV4cCI6MTk5MTU2ODkzM30.qKtfNHhL6AKqGsmDfjMq90bIWIWlnN3UVgnwcLF_vGY",
+    "revenueAppleApiKey": "appl_XNtOUZPHwUzelbvwdSezFsMrNeT",
+    "revenueGoogleApiKey": "goog_kpDTQdItiHkSrdjDdvLIwAdjOzG",
+    "revenueProductsIos": ["gpt_3999_1y_1w0", "gpt_399_1m_1w0"],
+    "revenueProductsAndroid": ["gpt_pro_v1"],
+    "enableSubscription": false,
+    "enableInputKey": false
   },
-
-  /// config for the chat app
-  /// config Whatapp: https://faq.whatsapp.com/en/iphone/23559013
   "smartChat": [
     {
-      "app": "firebase",
-      "imageData":
-          "https://trello.com/1/cards/611a38c89ebde41ec7cf10e2/attachments/611a392cceb1b534aa92a83e/previews/611a392dceb1b534aa92a84d/download",
-      "description": "Realtime Chat",
-    },
-    {
-      "app": "chatGPT",
-      "imageData": "https://i.imgur.com/pp1qlPd.png",
-      "description": "Chat GPT"
-    },
-    {
-      "app": "https://wa.me/849908854",
-      "iconData": "whatsapp",
-      "description": "WhatsApp"
-    },
-    {"app": "tel:8499999999", "iconData": "phone", "description": "Call Us"},
-    {"app": "sms://8499999999", "iconData": "sms", "description": "Send SMS"},
-    {
-      "app": "https://tawk.to/chat/5d830419c22bdd393bb69888/default",
-      "iconData": "whatsapp",
-      "description": "Tawk Chat"
-    },
-    {
-      "app": "http://m.me/inspireui",
-      "iconData": "facebookMessenger",
-      "description": "Facebook Chat"
-    },
-    {
-      "app":
-          "https://twitter.com/messages/compose?recipient_id=821597032011931648",
-      "imageData":
-          "https://trello.com/1/cards/611a38c89ebde41ec7cf10e2/attachments/611a38d026894f10dc1091c8/previews/611a38d126894f10dc1091d6/download",
-      "description": "Twitter Chat"
+      "app": "https://wa.me/573106182476",
+      "description": "WhatsApp",
+      "iconData": "whatsapp"
     }
   ],
   "adminEmail": "admininspireui@gmail.com",
   "adminName": "InspireUI",
-
-  /// ➡️ lib/common/vendor.dart
-  "vendorConfig": {
-    /// Show Register by Vendor
-    "VendorRegister": true,
-
-    /// Disable show shipping methods by vendor
-    "DisableVendorShipping": false,
-
-    /// Enable/Disable showing all vendor markers on Map screen
-    "ShowAllVendorMarkers": true,
-
-    /// Enable/Disable native store management
-    "DisableNativeStoreManagement": true,
-
-    /// Dokan Vendor Dashboard
-    "dokan": "my-account?vendor_admin=true",
-    "wcfm": "store-manager?vendor_admin=true",
-
-    /// Disable multivendor checkout
-    "DisableMultiVendorCheckout": false,
-
-    /// If this is false, then when creating/modifying products in FluxStore Manager
-    /// The publish status will be removed.
-    "DisablePendingProduct": false,
-
-    /// Default status when Add New Product from MV app.
-    /// Support 'draft', 'pending', 'publish'.
-    "NewProductStatus": "draft",
-
-    /// Default Vendor image.
-    "DefaultStoreImage": "assets/images/default-store-banner.png",
-
-    /// Set this to true to automatically approve the vendor application.
-    /// When it is set to false, these are the cases:
-    /// - For WCFM - It will set the registered role to subscribe with the meta "wcfm_membership_application_status": "pending".
-    /// - For Dokan - It still keeps the registered role as "seller" but the selling capability will be set to false. The meta for it is "dokan_enable_selling" : false
-    "EnableAutoApplicationApproval": false,
-
-    "BannerFit": "cover",
-    "ExpandStoreLocationByDefault": true,
-
-    /// Enable/Disable native delivery boy management
-    "DisableDeliveryManagement": true,
-
-    "hideChatInfoContact": true
-  },
-
-  /// Enable Delivery Boy Management in FluxStore Manager(WCFM)
-  "deliveryConfig": {
-    'appLogo': 'assets/images/app_icon_transparent.png',
-    'appName': 'FluxStore Delivery',
-    'dashboardName1': 'FluxStore',
-    'dashboardName2': 'Delivery',
-    'enableSystemNotes': false,
-  },
-
-  /// Enable Vendor Admin in FluxStore manager
+  "deliveryConfig": {"DisableDeliveryManagement": false},
   "managerConfig": {
-    'appLogo': 'assets/images/app_icon_transparent.png',
-    'appName': 'FluxStore Admin',
-    'enableDeliveryFeature': false,
+    "appLogo": "assets/images/app_icon_transparent.png",
+    "appName": "FluxStore Admin",
+    "enableDeliveryFeature": false
   },
-
-  /// ➡️ lib/common/loading.dart
-  "loadingIcon": {"size": 30.0, "type": "fadingCube"},
+  "loadingIcon": {"layout": "spinkit", "type": "ring"},
   "splashScreen": {
-    "enable": true,
-
-    /// duration in milliseconds, used for all types except "rive" and "flare"
     "duration": 2000,
-
-    ///  Type should be: 'fade-in', 'zoom-in', 'zoom-out', 'top-down', 'rive', 'flare', ''static'
-    "type": "flare",
-    "image": "assets/images/splashscreen.flr",
-
-    /// AnimationName's is used for 'rive' and 'flare' type
     "animationName": "fluxstore",
-
-    "boxFit": "contain",
+    "image":
+        "https://trello.com/1/cards/63d8946db97cfd9e9ef5f325/attachments/63dc1b1cabea05f276da0f4d/download/2023_Logo_Motohelp-02.png",
     "backgroundColor": "#ffffff",
-    "paddingTop": 0,
     "paddingBottom": 0,
-    "paddingLeft": 0,
+    "enable": true,
     "paddingRight": 0,
+    "boxFit": "scaleDown",
+    "paddingTop": 0,
+    "type": "zoom-out",
+    "paddingLeft": 0
   },
-  "reviewConfig": {
-    "service": "native",
-    "enableReview": true,
-    "enableReviewImage": false,
-    "judgeConfig": {
-      "domain": "https://inspireui-mstore.myshopify.com",
-      "apiKey":
-          "8b0d5f99732ec01d6f6b64891166e4fe4ba9634a83fe57e14edda11489da0f7e",
+  "productCard": {
+    "showCartIcon": true,
+    "enableRating": true,
+    "showCartButtonWithQuantity": false,
+    "borderRadius": 3,
+    "hideTitle": false,
+    "hideStore": false,
+    "showCartIconColor": false,
+    "showCartButton": false,
+    "boxFit": "contain",
+    "hidePrice": false
+  },
+  "onBoardingData": [
+    {
+      "image": "assets/images/fogg-delivery-1.png",
+      "title": "Warmly Welcome!",
+      "desc": "Fluxstore is on the way to serve you. "
+    },
+    {
+      "image": "assets/images/fogg-uploading-1.png",
+      "title": "Connect Surrounding World",
+      "desc":
+          "See all things happening around you just by a click in your phone. Fast, convenient and clean."
+    },
+    {
+      "image": "assets/images/fogg-order-completed.png",
+      "title": "Let's Get Started",
+      "desc": "Waiting no more, let's see what we get!"
     }
+  ],
+  "darkConfig": {
+    "MainColor": "#3FC1BE",
+    "logo": "https://i.imgur.com/z0ZbY0V.png"
+  },
+  "enableOnBoarding": false,
+  "colorOverrideConfig": {
+    "productFilterColor": {
+      "backgroundColorOpacity": 1,
+      "labelColorOpacity": 1,
+      "useAccentColor": false,
+      "useBackgroundColor": false,
+      "usePrimaryColorLight": false
+    },
+    "stockColor": {
+      "backorder": "ffeaa601",
+      "outOfStock": "ffe74c3c",
+      "inStock": "ff2196f3"
+    }
+  },
+  "addressFields": [
+    {
+      "visible": true,
+      "editable": true,
+      "defaultValue": "",
+      "position": 1,
+      "type": "firstName",
+      "required": true
+    },
+    {
+      "visible": true,
+      "defaultValue": "",
+      "editable": true,
+      "position": 2,
+      "type": "lastName",
+      "required": true
+    },
+    {
+      "visible": true,
+      "editable": true,
+      "defaultValue": "",
+      "position": 3,
+      "type": "phoneNumber",
+      "required": true
+    },
+    {
+      "visible": true,
+      "defaultValue": "",
+      "editable": true,
+      "position": 4,
+      "type": "email",
+      "required": true
+    },
+    {"visible": true, "position": 5, "type": "searchAddress"},
+    {"visible": true, "position": 6, "type": "selectAddress"},
+    {"visible": true, "position": 7, "type": "country"},
+    {"visible": true, "position": 8, "type": "state"},
+    {
+      "visible": true,
+      "defaultValue": "",
+      "editable": true,
+      "position": 9,
+      "type": "city",
+      "required": true
+    },
+    {
+      "visible": true,
+      "editable": true,
+      "defaultValue": "",
+      "position": 10,
+      "type": "apartment",
+      "required": false
+    },
+    {
+      "visible": true,
+      "defaultValue": "",
+      "editable": true,
+      "position": 11,
+      "type": "block",
+      "required": false
+    },
+    {
+      "visible": true,
+      "defaultValue": "",
+      "editable": true,
+      "position": 12,
+      "type": "street",
+      "required": true
+    },
+    {
+      "visible": true,
+      "defaultValue": "",
+      "editable": true,
+      "position": 13,
+      "type": "zipCode",
+      "required": true
+    }
+  ],
+  "lightConfig": {
+    "MainColor": "ff2196f3",
+    "logo": "https://i.imgur.com/z0ZbY0V.png"
+  },
+  "storeIdentifier": {
+    "disable": true,
+    "android": "com.inspireui.fluxstore",
+    "ios": "1469772800"
   }
 };
