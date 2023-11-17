@@ -99,6 +99,7 @@ class _ProductCardState extends State<ProductCard> with ActionButtonMixin {
                         ProductPricing(
                           product: widget.item,
                           hide: widget.config.hidePrice,
+                          priceColor: Colors.blue, // Establece el color del precio aquí
                         ),
                         const SizedBox(height: 2),
                         StockStatus(

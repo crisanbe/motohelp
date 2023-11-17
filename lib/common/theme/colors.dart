@@ -79,6 +79,7 @@ const kTeal100 = Color(0xFF3FC1BE);
 
 const kTeal400 = Color(0xFF26A69A);
 const kGrey900 = Color(0xFF263238);
+const kGris900 = Color(0xFF888888);
 const kGrey600 = Color(0xFF546E7A);
 const kGrey200 = Color(0xFFEEEEEE);
 const kGrey400 = Color(0xFF90a4ae);

@@ -11,6 +11,7 @@ class ProductPricing extends StatelessWidget {
   final bool hide;
   final bool showOnlyPrice;
   final TextStyle? priceTextStyle;
+  final Color? priceColor; // Nuevo parámetro para el color del precio
 
   const ProductPricing({
     Key? key,
@@ -18,6 +19,7 @@ class ProductPricing extends StatelessWidget {
     required this.hide,
     this.showOnlyPrice = false,
     this.priceTextStyle,
+    this.priceColor, // Agregado el parámetro priceColor
   }) : super(key: key);
 
   @override
@@ -44,26 +46,27 @@ class ProductPricing extends StatelessWidget {
         Text(
           product.type == 'grouped'
               ? '${S.of(context).from} ${PriceTools.getPriceProduct(
-                  product,
-                  currencyRate,
-                  currency,
-                  onSale: true,
-                )}'
+            product,
+            currencyRate,
+            currency,
+            onSale: true,
+          )}'
               : priceProduct == '0.0'
-                  ? S.of(context).loading
-                  : ServerConfig().isListingType
-                      ? PriceTools.getCurrencyFormatted(
-                          product.price ?? product.regularPrice ?? '0', null,
-                          currency: currency)!
-                      : PriceTools.getPriceProduct(
-                          product, currencyRate, currency,
-                          onSale: true)!,
+              ? S.of(context).loading
+              : ServerConfig().isListingType
+              ? PriceTools.getCurrencyFormatted(
+              product.price ?? product.regularPrice ?? '0', null,
+              currency: currency)!
+              : PriceTools.getPriceProduct(
+              product, currencyRate, currency,
+              onSale: true)!,
           style: Theme.of(context)
               .textTheme
               .titleLarge!
               .copyWith(
-                fontWeight: FontWeight.w600,
-              )
+            fontWeight: FontWeight.w600,
+            color: priceColor, // Establece el color del precio
+          )
               .apply(fontSizeFactor: 0.8)
               .merge(priceTextStyle),
         ),
@@ -75,24 +78,24 @@ class ProductPricing extends StatelessWidget {
             product.type == 'grouped'
                 ? ''
                 : PriceTools.getPriceProduct(product, currencyRate, currency,
-                    onSale: false)!,
+                onSale: false)!,
             style: Theme.of(context)
                 .textTheme
                 .bodySmall!
                 .copyWith(
-                  fontWeight: FontWeight.w300,
-                  color:
-                      Theme.of(context).colorScheme.secondary.withOpacity(0.6),
-                  decoration: TextDecoration.lineThrough,
-                )
+              fontWeight: FontWeight.w300,
+              color:
+              Theme.of(context).colorScheme.secondary.withOpacity(0.6),
+              decoration: TextDecoration.lineThrough,
+            )
                 .apply(fontSizeFactor: 0.8)
                 .merge(
-                  priceTextStyle?.copyWith(
-                      color: priceTextStyle?.color?.withOpacity(0.6),
-                      fontSize: priceTextStyle?.fontSize != null
-                          ? priceTextStyle!.fontSize! - 2
-                          : null),
-                ),
+              priceTextStyle?.copyWith(
+                  color: priceTextStyle?.color?.withOpacity(0.6),
+                  fontSize: priceTextStyle?.fontSize != null
+                      ? priceTextStyle!.fontSize! - 2
+                      : null),
+            ),
           ),
         ],
       ],
