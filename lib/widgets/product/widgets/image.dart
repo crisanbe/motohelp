@@ -36,7 +36,8 @@ class ProductImage extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.0),
         border: Border.all(
-          color: Theme.of(context).colorScheme.onBackground
+          width: 0.3,
+          color: Theme.of(context).hintColor
         ),
       ),
       child: ClipRRect(

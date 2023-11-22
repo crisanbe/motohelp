@@ -250,7 +250,7 @@ class _ProductListState extends State<ProductList> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.0), // Ajusta el radio según tus necesidades
               border: Border.all(
-                color: Theme.of(context).colorScheme.onBackground, // Color del borde
+                color: Theme.of(context).hintColor, // Color del borde
                 width: 1.5, // Ancho del borde
               ),
             ),

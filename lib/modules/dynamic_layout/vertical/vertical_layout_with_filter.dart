@@ -170,26 +170,35 @@ class _VerticalViewLayoutWithFilterState
                               column,
                               (indexColumn) {
                                 return Expanded(
-                                  child: index * column + indexColumn <
-                                          value.length
+                                  child: index * column + indexColumn < value.length
                                       ? LayoutBuilder(
-                                          builder: (context, constraints) {
-                                            return Padding(
-                                              padding: const EdgeInsets.only(
-                                                  bottom: 5),
-                                              child: Services()
-                                                  .widget
-                                                  .renderProductCardView(
-                                                    item: value[index * column +
-                                                        indexColumn],
-                                                    width: constraints.maxWidth,
-                                                    config: widget.config,
-                                                    ratioProductImage: widget
-                                                        .config.imageRatio,
-                                                  ),
-                                            );
-                                          },
-                                        )
+                                    builder: (context, constraints) {
+                                      var product = value[index * column + indexColumn];
+                                      return Padding(
+                                        padding: const EdgeInsets.only(bottom: 5),
+                                        child: ClipRRect(
+                                          borderRadius: BorderRadius.circular(12.0), // Ajusta el radio según tu preferencia
+                                          child: Card(
+                                            elevation: 1, // Ajusta la elevación según tu preferencia
+                                            borderOnForeground: true,
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(12.0),
+                                              side: BorderSide(
+                                                color: Theme.of(context).hintColor,
+                                                width: 1.0,
+                                              ),
+                                            ),
+                                            child: Services().widget.renderProductCardView(
+                                              item: product,
+                                              width: constraints.maxWidth,
+                                              config: widget.config,
+                                              ratioProductImage: widget.config.imageRatio,
+                                            ),
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                  )
                                       : const SizedBox(),
                                 );
                               },
