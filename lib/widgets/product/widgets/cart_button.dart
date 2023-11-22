@@ -35,10 +35,12 @@ class CartButton extends StatelessWidget with ActionButtonMixin {
         enableBottomAddToCart: enableBottomAddToCart,
       ),
       child: Text(
-        S.of(context).addToCart,
+        S.of(context).addToCart == 'Añadir al Carrito'
+            ? 'Comprar'  // Cambia 'Nuevo Texto' por el texto que desees
+            : S.of(context).addToCart,
         style: Theme.of(context).textTheme.bodyLarge!.copyWith(
-              color: Colors.white,
-            ),
+          color: Colors.white,
+        ),
       ),
     );
   }
