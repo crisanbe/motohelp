@@ -30,9 +30,7 @@ class PageTabScreen extends StatelessWidget {
           child: const Icon(Icons.arrow_back_ios),
         ),
         title: Text(
-          (config.label ?? config.menuLabel) == 'asesorcomrecial'
-              ? 'Contacta un asesor'
-              : config.label ?? config.menuLabel,
+          config.label ?? config.menuLabel,
           style: Theme.of(context).primaryTextTheme.headlineSmall,
         ),
         backgroundColor: Theme.of(context).colorScheme.background,
