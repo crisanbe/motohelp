@@ -2,7 +2,7 @@ part of '../config.dart';
 
 class DefaultConfig {
   static String environment = '';
-  static String appName = 'Fluxstore';
+  static String appName = 'MotoHelp';
   static bool enableRemoteConfigFirebase = false;
   static bool enableFirebaseAnalytics = false;
   static bool enableCrashAnalytics = false;
