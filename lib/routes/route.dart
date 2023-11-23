@@ -539,11 +539,11 @@ class Routes {
           settings,
           (context) => const HomeScreen(),
         );
-      case RouteList.onBoarding:
+      /*case RouteList.onBoarding:
         return _buildRoute(
           settings,
           (context) => const OnBoardingScreen(),
-        );
+        );*/
       case RouteList.cart:
         final cartArgument = settings.arguments;
         if (cartArgument is CartScreenArgument) {

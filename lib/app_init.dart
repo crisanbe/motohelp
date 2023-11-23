@@ -147,7 +147,7 @@ class _AppInitState extends BaseScreen<AppInit> {
       if (onBoardingConfig.enableOnBoarding &&
           (!SettingsBox().hasFinishedOnboarding ||
               !onBoardingConfig.isOnlyShowOnFirstTime)) {
-        await Navigator.of(context).pushReplacementNamed(RouteList.onBoarding);
+        await Navigator.of(context).pushReplacementNamed(RouteList.login);
         return;
       }
 

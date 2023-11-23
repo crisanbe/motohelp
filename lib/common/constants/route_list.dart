@@ -4,7 +4,7 @@ part of '../constants.dart';
 class RouteList {
   // Home
   static const String home = 'home';
-  static const String onBoarding = 'onBoarding';
+  //static const String onBoarding = 'onBoarding';
   static const String dashboard = 'dashboard';
   static const String homeSearch = 'home-search';
   static const String notificationRequest = 'notification-request';
