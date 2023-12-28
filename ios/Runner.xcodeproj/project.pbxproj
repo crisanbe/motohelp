@@ -390,7 +390,6 @@
 				TargetAttributes = {
 					97C146ED1CF9000F007C117D = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = S9RPAM8224;
 						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -838,7 +837,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S9RPAM8224;
+				DEVELOPMENT_TEAM = S72SSNK4UB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -861,6 +860,7 @@
 					Flutter,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "${iosBundleId}";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.motohelp.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
@@ -992,7 +992,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S9RPAM8224;
+				DEVELOPMENT_TEAM = S72SSNK4UB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1015,6 +1015,7 @@
 					Flutter,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "${iosBundleId}";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.motohelp.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
@@ -1034,7 +1035,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S9RPAM8224;
+				DEVELOPMENT_TEAM = S72SSNK4UB;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1057,6 +1058,7 @@
 					Flutter,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "${iosBundleId}";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.motohelp.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
