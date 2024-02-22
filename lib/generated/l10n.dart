@@ -1073,7 +1073,7 @@ class S {
   /// `Don't have an account?`
   String get dontHaveAccount {
     return Intl.message(
-      'Don\'t have an account?',
+      'No tienes una cuenta' ,
       name: 'dontHaveAccount',
       desc: '',
       args: [],

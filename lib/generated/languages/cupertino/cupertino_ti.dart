@@ -2,7 +2,7 @@
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
-class CupertinoLocalizationTi extends GlobalCupertinoLocalizations {
+ class CupertinoLocalizationTi extends GlobalCupertinoLocalizations {
   /// Create an instance of the translation bundle for English.
   ///
   /// For details on the meaning of the arguments, see [GlobalCupertinoLocalizations].
@@ -163,4 +163,7 @@ class CupertinoLocalizationTi extends GlobalCupertinoLocalizations {
 
   @override
   String get noSpellCheckReplacementsLabel => 'ምንም ምናልባት ኣይተመልክቶም';
+
+  @override
+  dynamic noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }

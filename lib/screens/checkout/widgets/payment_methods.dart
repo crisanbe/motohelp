@@ -54,7 +54,7 @@ class _PaymentMethodsState extends State<PaymentMethods> with RazorDelegate {
       Provider.of<PaymentMethodModel>(context, listen: false).getPaymentMethods(
           cartModel: cartModel,
           shippingMethod: cartModel.shippingMethod,
-          token: userModel.user != null ? userModel.user!.cookie : null,
+          token: userModel.user?.cookie,
           langCode: langCode);
 
       if (kPaymentConfig.enableReview != true) {

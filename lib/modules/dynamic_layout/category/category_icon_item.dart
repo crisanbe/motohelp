@@ -40,7 +40,7 @@ class CategoryIconItem extends StatelessWidget {
     final categoryName =
         name ?? (categoryList[id] != null ? categoryList[id]!.name : '');
     final image = itemConfig?.image ??
-        (categoryList[id] != null ? categoryList[id]!.image : null);
+        (categoryList[id]?.image);
     final firstColor = (itemConfig?.colors?.isNotEmpty ?? false)
         ? itemConfig?.colors?.first
         : null;

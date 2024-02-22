@@ -894,7 +894,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Visualizzazione della pagina"),
         "paid": MessageLookupByLibrary.simpleMessage("pagato"),
         "paidStatus": MessageLookupByLibrary.simpleMessage("Stato pagato"),
-        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "password": MessageLookupByLibrary.simpleMessage("Contraseña"),
         "pasteYourImageUrl": MessageLookupByLibrary.simpleMessage(
             "Incolla l\'URL dell\'immagine"),
         "payByWallet":

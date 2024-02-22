@@ -1749,7 +1749,7 @@ class WooCommerceService extends BaseServices {
     try {
       if (isBookingProduct(cartModel)) return null;
       final params = Order().toJson(
-          cartModel, cartModel.user != null ? cartModel.user!.id : null, false);
+          cartModel, cartModel.user?.id, false);
 
       final response = await httpPost(
           '$domain/wp-json/api/flutter_woo/taxes'.toUri()!,

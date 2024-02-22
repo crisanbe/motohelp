@@ -144,8 +144,8 @@ class WooWidget extends BaseFrameworks
     if (kPaymentConfig.enableOnePageCheckout) {
       loading!(true);
       var params = Order().toJson(
-          cartModel, userModel.user != null ? userModel.user!.id : null, true);
-      params['token'] = userModel.user != null ? userModel.user!.cookie : null;
+          cartModel, userModel.user?.id, true);
+      params['token'] = userModel.user?.cookie;
       var url = await Services().api.getCheckoutUrl(
           params, Provider.of<AppModel>(context, listen: false).langCode)!;
       loading(false);
@@ -207,12 +207,12 @@ class WooWidget extends BaseFrameworks
       if (bacs) {
         await Services().api.updateOrder(order.id,
             status: 'on-hold',
-            token: userModel.user != null ? userModel.user!.cookie : null);
+            token: userModel.user?.cookie);
       }
       if ((cod && kPaymentConfig.updateOrderStatus)) {
         await Services().api.updateOrder(order.id,
             status: 'processing',
-            token: userModel.user != null ? userModel.user!.cookie : null);
+            token: userModel.user?.cookie);
       }
       if (!isLoggedIn) {
         var items = UserBox().orders;
@@ -446,9 +446,7 @@ class WooWidget extends BaseFrameworks
 //    if (!beforehand) return;
 //    final cartModel = Provider.of<CartModel>(context, listen: false);
     Future.delayed(Duration.zero, () {
-      final token = Provider.of<UserModel>(context, listen: false).user != null
-          ? Provider.of<UserModel>(context, listen: false).user!.cookie
-          : null;
+      final token = Provider.of<UserModel>(context, listen: false).user?.cookie;
       var langCode = Provider.of<AppModel>(context, listen: false).langCode;
       Provider.of<ShippingMethodModel>(context, listen: false)
           .getShippingMethods(

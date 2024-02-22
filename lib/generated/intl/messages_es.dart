@@ -1249,7 +1249,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "showMore": MessageLookupByLibrary.simpleMessage("Mostrar más"),
         "signIn": MessageLookupByLibrary.simpleMessage("Acceder"),
         "signInWithEmail": MessageLookupByLibrary.simpleMessage(
-            "Inicia sesión con correo electrónico"),
+            "Inicia sesión"),
         "signUp": MessageLookupByLibrary.simpleMessage("Regístrate"),
         "signup": MessageLookupByLibrary.simpleMessage("Regístrate"),
         "simple": MessageLookupByLibrary.simpleMessage("Sencillo"),

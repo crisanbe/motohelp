@@ -509,4 +509,20 @@ class MaterialLocalizationKu extends GlobalMaterialLocalizations {
 
   @override
   String get scanTextButtonLabel => 'دەقی سکان کردن';
+  
+  @override
+  // TODO: implement lookUpButtonLabel
+  String get lookUpButtonLabel => throw UnimplementedError();
+  
+  @override
+  // TODO: implement menuDismissLabel
+  String get menuDismissLabel => throw UnimplementedError();
+  
+  @override
+  // TODO: implement searchWebButtonLabel
+  String get searchWebButtonLabel => throw UnimplementedError();
+  
+  @override
+  // TODO: implement shareButtonLabel
+  String get shareButtonLabel => throw UnimplementedError();
 }

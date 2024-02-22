@@ -858,7 +858,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "pageView": MessageLookupByLibrary.simpleMessage("Page View"),
         "paid": MessageLookupByLibrary.simpleMessage("Paid"),
         "paidStatus": MessageLookupByLibrary.simpleMessage("Paid status"),
-        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "password": MessageLookupByLibrary.simpleMessage("Contraseña"),
         "pasteYourImageUrl":
             MessageLookupByLibrary.simpleMessage("Paste your image url"),
         "payByWallet": MessageLookupByLibrary.simpleMessage("Pay by wallet"),
@@ -1065,7 +1065,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "You have requested too many codes in a short time. Please try again later."),
         "resend": MessageLookupByLibrary.simpleMessage(" RESEND"),
         "reset": MessageLookupByLibrary.simpleMessage("Reset"),
-        "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
+        "resetPassword": MessageLookupByLibrary.simpleMessage("Cambiar Contraseña"),
         "resetYourPassword":
             MessageLookupByLibrary.simpleMessage("Reset Your Password"),
         "results": MessageLookupByLibrary.simpleMessage("Results"),
@@ -1173,7 +1173,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "showMore": MessageLookupByLibrary.simpleMessage("Show More"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
         "signInWithEmail":
-            MessageLookupByLibrary.simpleMessage("Sign in with email "),
+            MessageLookupByLibrary.simpleMessage("Iniciar Sesión"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "signup": MessageLookupByLibrary.simpleMessage("Sign up"),
         "simple": MessageLookupByLibrary.simpleMessage("Simple"),
@@ -1335,7 +1335,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "This username/email is not available."),
         "userNameInCorrect": MessageLookupByLibrary.simpleMessage(
             "The username or password is incorrect."),
-        "username": MessageLookupByLibrary.simpleMessage("Username"),
+        "username": MessageLookupByLibrary.simpleMessage("Correo"),
         "usernameAndPasswordRequired": MessageLookupByLibrary.simpleMessage(
             "Username and password are required"),
         "vacationMessage":

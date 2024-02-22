@@ -795,7 +795,7 @@ mixin ProductAddonsMixin {
           'title': {'rendered': path.basename(file.path.toString())},
           'media_attachment': base64.encode(file.bytes!),
           'media_path': 'product_addons_uploads',
-        }, userModel.user != null ? userModel.user!.cookie : null)!.then(
+        }, userModel.user?.cookie)!.then(
             (photo) {
           urls.add(photo['guid']['rendered']);
         });

@@ -9,6 +9,7 @@ class ConfigurationUtils {
     final dataAdConfig = List.from([data]);
     if (data.isNotEmpty) {
       for (var e in kAdType.values) {
+        // ignore: deprecated_member_use
         if (describeEnum(e) == dataAdConfig[0]['type']) {
           dataAdConfig[0]['type'] = e;
         }

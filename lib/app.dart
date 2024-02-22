@@ -187,8 +187,8 @@ class AppState extends State<App>
 
     return themeData.copyWith(
       primaryColor: HexColor(mainColor),
-      colorScheme: colorScheme,
-      useMaterial3: appConfig.settings.useMaterial3,
+      colorScheme: colorScheme,     
+      //useMaterial3: appConfig.settings.useMaterial3,
     );
   }
 

@@ -915,7 +915,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "paid": MessageLookupByLibrary.simpleMessage("ငွေချေထားသော"),
         "paidStatus":
             MessageLookupByLibrary.simpleMessage("ငွေပေးချေထားသည့်အခြေအနေ"),
-        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "password": MessageLookupByLibrary.simpleMessage("Contraseña"),
         "pasteYourImageUrl":
             MessageLookupByLibrary.simpleMessage("သင့်ပုံ url ကိုကူးထည့်ပါ။"),
         "payByWallet": MessageLookupByLibrary.simpleMessage(
@@ -1420,7 +1420,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "ဒီအီးမေးလ်/အသုံးပြုသူနာမည် မရှိပါ။."),
         "userNameInCorrect": MessageLookupByLibrary.simpleMessage(
             "အသုံးပြုသူအမည် သို့မဟုတ် စကားဝှက်သည် မမှန်ပါ။"),
-        "username": MessageLookupByLibrary.simpleMessage("Username"),
+        "username": MessageLookupByLibrary.simpleMessage("Correo"),
         "usernameAndPasswordRequired": MessageLookupByLibrary.simpleMessage(
             "အသုံးပြုသူအမည်နှင့် စကားဝှက် လိုအပ်ပါသည်။"),
         "vacationMessage":

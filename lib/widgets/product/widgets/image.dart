@@ -32,7 +32,7 @@ class ProductImage extends StatelessWidget {
         : 0.0;
 
     return Container(
-      margin: EdgeInsets.all(7.0), // Ajusta los márgenes del contenedor
+      margin: const EdgeInsets.all(7.0), // Ajusta los márgenes del contenedor
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.0),
         border: Border.all(

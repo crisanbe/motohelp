@@ -21,7 +21,7 @@ class Coupons {
     try {
       final endpoint = '${ServerConfig().url}/wp-json/api/flutter_woo/coupon';
       var params = Order().toJson(
-          cartModel, cartModel.user != null ? cartModel.user!.id : null, false);
+          cartModel, cartModel.user?.id, false);
       params['coupon_code'] = couponCode;
       final response = await httpPost(endpoint.toUri()!,
           body: json.encode(params),
