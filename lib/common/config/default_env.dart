@@ -524,7 +524,7 @@ class DefaultConfig {
     'paymentMethodId': 'expresspay',
     'merchantKey': 'b2be2ffc-c8b9-11ed-82a9-42eb4e39c8ae',
     'merchantPassword': '4a00a5fd3c63dd2b743c75746af6ffe2',
-    'merchantId': 'merchant.com.inspireui.mstore.flutter',
+    'merchantId': 'merchant.com.inspireui.mstore.motohelp',
     'production': false,
     'enabled': true
   };

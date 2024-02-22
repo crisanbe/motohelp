@@ -20,11 +20,11 @@
 envatoPurchaseCode=put-your-envato-purchase-code-here
 
 # Your app information.
-appName=FluxStore
+appName=MotoHelp
 iosBundleId=com.inspireui.mstore.flutter
-iosBundleIdOneSignal=com.inspireui.mstore.flutter.onesignal
-iosAppGroups=group.com.inspireui.mstore.flutter.onesignal
-iosMerchantId=merchant.com.inspireui.mstore.flutter
+iosBundleIdOneSignal=com.inspireui.mstore.motohelp.onesignal
+iosAppGroups=group.com.inspireui.mstore.motohelp.onesignal
+iosMerchantId=merchant.com.inspireui.mstore.motohelp
 androidPackageName=com.inspireui.fluxstore
 
 # For some native payments, push notification and Dynamic Links features (optional).

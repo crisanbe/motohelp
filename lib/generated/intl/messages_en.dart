@@ -439,7 +439,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Apple Pay is not available on this device!"),
         "done": MessageLookupByLibrary.simpleMessage("Done"),
         "dontHaveAccount":
-            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+            MessageLookupByLibrary.simpleMessage("No tienes una cuenta?"),
         "download": MessageLookupByLibrary.simpleMessage("Download"),
         "downloadApp": MessageLookupByLibrary.simpleMessage("Download App"),
         "draft": MessageLookupByLibrary.simpleMessage("Draft"),
@@ -1065,7 +1065,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "You have requested too many codes in a short time. Please try again later."),
         "resend": MessageLookupByLibrary.simpleMessage(" RESEND"),
         "reset": MessageLookupByLibrary.simpleMessage("Reset"),
-        "resetPassword": MessageLookupByLibrary.simpleMessage("Cambiar Contraseña"),
+        "resetPassword":
+            MessageLookupByLibrary.simpleMessage("Cambiar Contraseña"),
         "resetYourPassword":
             MessageLookupByLibrary.simpleMessage("Reset Your Password"),
         "results": MessageLookupByLibrary.simpleMessage("Results"),
@@ -1173,7 +1174,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "showMore": MessageLookupByLibrary.simpleMessage("Show More"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign In"),
         "signInWithEmail":
-            MessageLookupByLibrary.simpleMessage("Iniciar Sesión"),
+            MessageLookupByLibrary.simpleMessage("Sign in with email "),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "signup": MessageLookupByLibrary.simpleMessage("Sign up"),
         "simple": MessageLookupByLibrary.simpleMessage("Simple"),

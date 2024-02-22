@@ -1070,10 +1070,10 @@ class S {
     );
   }
 
-  /// `Don't have an account?`
+  /// `No tienes una cuenta?`
   String get dontHaveAccount {
     return Intl.message(
-      'No tienes una cuenta' ,
+      'No tienes una cuenta?',
       name: 'dontHaveAccount',
       desc: '',
       args: [],
@@ -1480,20 +1480,20 @@ class S {
     );
   }
 
-  /// `Username`
+  /// `Correo`
   String get username {
     return Intl.message(
-      'Username',
+      'Correo',
       name: 'username',
       desc: '',
       args: [],
     );
   }
 
-  /// `Password`
+  /// `Contraseña`
   String get password {
     return Intl.message(
-      'Password',
+      'Contraseña',
       name: 'password',
       desc: '',
       args: [],
@@ -2160,10 +2160,10 @@ class S {
     );
   }
 
-  /// `Reset Password`
+  /// `Cambiar Contraseña`
   String get resetPassword {
     return Intl.message(
-      'Reset Password',
+      'Cambiar Contraseña',
       name: 'resetPassword',
       desc: '',
       args: [],
