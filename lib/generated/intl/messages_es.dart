@@ -1314,10 +1314,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "street2": MessageLookupByLibrary.simpleMessage("Calle # 2"),
         "streetIsRequired": MessageLookupByLibrary.simpleMessage(
             "El campo del nombre de la Calle es obligatorio"),
-        "streetName": MessageLookupByLibrary.simpleMessage("Calle"),
+        "streetName": MessageLookupByLibrary.simpleMessage("Dirección"),
         "streetNameApartment":
             MessageLookupByLibrary.simpleMessage("Apartamento"),
-        "streetNameBlock": MessageLookupByLibrary.simpleMessage("Blocqueado"),
+        "streetNameBlock": MessageLookupByLibrary.simpleMessage("Barrio"),
         "submit": MessageLookupByLibrary.simpleMessage("Enviar"),
         "submitYourPost":
             MessageLookupByLibrary.simpleMessage("Envíe su publicación"),

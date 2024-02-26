@@ -48,9 +48,9 @@ class _ShippingAddressState extends State<ShippingAddress> {
     AddressFieldType.country: TextEditingController(),
     AddressFieldType.state: TextEditingController(),
     AddressFieldType.city: TextEditingController(),
-    AddressFieldType.apartment: TextEditingController(),
-    AddressFieldType.block: TextEditingController(),
     AddressFieldType.street: TextEditingController(),
+    AddressFieldType.block: TextEditingController(),
+    AddressFieldType.apartment: TextEditingController(),
     AddressFieldType.zipCode: TextEditingController(),
   };
 
@@ -60,10 +60,10 @@ class _ShippingAddressState extends State<ShippingAddress> {
     AddressFieldType.phoneNumber: FocusNode(),
     AddressFieldType.email: FocusNode(),
     AddressFieldType.state: FocusNode(),
+    AddressFieldType.street: FocusNode(),
     AddressFieldType.city: FocusNode(),
     AddressFieldType.apartment: FocusNode(),
     AddressFieldType.block: FocusNode(),
-    AddressFieldType.street: FocusNode(),
     AddressFieldType.zipCode: FocusNode(),
   };
 
@@ -326,8 +326,7 @@ class _ShippingAddressState extends State<ShippingAddress> {
 
                         if (currentFieldType ==
                             AddressFieldType.searchAddress) {
-                          if (kPaymentConfig.allowSearchingAddress &&
-                              kGoogleApiKey.isNotEmpty) {
+                          if (false) {
                             return Padding(
                               padding: const EdgeInsets.only(top: 10.0),
                               child: Row(

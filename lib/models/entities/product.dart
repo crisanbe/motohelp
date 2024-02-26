@@ -821,6 +821,7 @@ class Product {
 
       minPrice = parsedJson['min_price'];
       maxPrice = parsedJson['max_price'];
+
       if (isVariableProduct && parsedJson['variation_products'] != null) {
         try {
           variationProducts = [];
